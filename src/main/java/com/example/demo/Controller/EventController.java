@@ -17,6 +17,4 @@ public class EventController {
         model.addAttribute("events", eventService.getEventes());
         return "events";
     }
-
-
 }
