@@ -15,7 +15,6 @@
 
 ### 기록부터 선택까지, 온스가 함께합니다.
 
-:smiley_cat: <b>SOPT 26th APPJAM</b>
 
 :smiley_cat: <b>Project Period : 2020.08.06 ~ </b>
 
