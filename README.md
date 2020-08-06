@@ -22,9 +22,6 @@
 :smiley_cat: <b>[API Specification](https://github.com/We-are-Ounce/OUNCE_Server/wiki)</b>
 
 
-### :rainbow: :unicorn: Peaceful Server Team :unicorn: :rainbow:
-![단체사진](./ounce/img/단체사진.jpg)
-
 
 <br>
 
