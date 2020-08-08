@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.Service.AuthService;
+import com.example.demo.service.AuthService;
 import com.example.demo.model.DefaultRes;
 import com.example.demo.model.LoginReq;
 import com.example.demo.utils.ResponseMessage;

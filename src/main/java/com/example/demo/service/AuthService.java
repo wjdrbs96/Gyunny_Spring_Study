@@ -1,4 +1,4 @@
-package com.example.demo.Service;
+package com.example.demo.service;
 
 import com.example.demo.dto.User;
 import com.example.demo.mapper.UserMapper;
@@ -19,6 +19,7 @@ public class AuthService {
         this.jwtService = jwtService;
     }
 
+    // Client 로그인 요청이 왔을
     public DefaultRes<JwtService.TokenRes> login(final LoginReq loginReq) {
         final User user = userMapper.findByNameAndPassword(loginReq.getName(), loginReq.getPassword());
         if (user != null) {

@@ -1,6 +1,6 @@
 package com.example.demo.utils.auth;
 
-import com.example.demo.Service.JwtService;
+import com.example.demo.service.JwtService;
 import com.example.demo.dto.User;
 import com.example.demo.mapper.UserMapper;
 import com.example.demo.model.DefaultRes;
@@ -42,7 +42,7 @@ public class AuthAspect {
     @Around("@annotation(com.example.demo.utils.auth.Auth)")
     public Object around(final ProceedingJoinPoint pjp) throws Throwable {
         final String jwt = httpServletRequest.getHeader(AUTHORIZATION);
-        log.info(jwt);
+
         // 토큰 존재 여부 확인
         if (jwt == null) {
             return RES_RESPONSE_ENTITY;

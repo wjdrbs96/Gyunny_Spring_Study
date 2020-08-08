@@ -1,4 +1,4 @@
-package com.example.demo.Service;
+package com.example.demo.service;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTCreator;
@@ -90,8 +90,4 @@ public class JwtService {
             this.token = token;
         }
     }
-
-
-
-
 }
