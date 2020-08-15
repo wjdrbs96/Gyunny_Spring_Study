@@ -26,7 +26,7 @@ public class KaKaoAPI {
 
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream()));
             StringBuilder sb = new StringBuilder();
-            sb.append("&grant_type=authorization_code");
+            sb.append("grant_type=authorization_code");
             sb.append("&client_id=856ec0be1a62b01007353103f2cbc64d");
             sb.append("&redirect_uri=http://localhost:8080/login");
             sb.append("&code=" + authorize_code);

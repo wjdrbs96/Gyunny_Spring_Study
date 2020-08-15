@@ -17,7 +17,7 @@ public class KaKaoController {
         return "test";
     }
 
-    @GetMapping(value = "/login")
+    @GetMapping(value = "/auth")
     public String login(@RequestParam("code") String code) {
         String access_Token = kaKaoAPI.getAccessToken(code);
         System.out.println("Controller Access Token: " + access_Token);
