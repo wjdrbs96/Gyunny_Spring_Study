@@ -12,12 +12,12 @@ public class KaKaoController {
     @Autowired
     KaKaoAPI kaKaoAPI;
 
-    @GetMapping("/")
+    @GetMapping("")
     public String index() {
         return "test";
     }
 
-    @GetMapping(value = "/auth")
+    @GetMapping("auth")
     public String login(@RequestParam("code") String code) {
         String access_Token = kaKaoAPI.getAccessToken(code);
         System.out.println("Controller Access Token: " + access_Token);

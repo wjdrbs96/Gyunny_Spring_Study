@@ -17,7 +17,7 @@ public class KaKaoAPI {
         String reqURL = "https://kauth.kakao.com/oauth/token";
 
         try {
-            // reqURL 에 대한 protocol, portNumber 등등 정보를 파싱할 수 있는 URL 클래스
+            // URL 에 대한 protocol, portNumber 등등 정보를 파싱할 수 있는 URL 클래스
             URL url = new URL(reqURL);
             // https://mindols.tistory.com/108 참고
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
