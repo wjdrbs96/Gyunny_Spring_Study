@@ -31,7 +31,7 @@ public class LoginController {
      * @param loginReq 로그인 객체
      * @return ResponseEntity
      */
-    @PostMapping("login")
+    @PostMapping("login2")
     public ResponseEntity login(@RequestBody LoginReq loginReq) {
         try {
             return new ResponseEntity(authService.login(loginReq), HttpStatus.OK);
