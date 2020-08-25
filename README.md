@@ -1,12 +1,12 @@
 # Spring Study
 
-* ### [1주차]()
+* ### 1주차
     * [IoC와 DI란?](https://devlog-wjdrbs96.tistory.com/165?category=882236)
     * [Autowired란?](https://devlog-wjdrbs96.tistory.com/166?category=882236)
     * [Compoent와 CompoentScan이란](https://devlog-wjdrbs96.tistory.com/167?category=882236)
     * [빈의 스코프](https://devlog-wjdrbs96.tistory.com/168?category=882236)
 
-* ### [2주차](https://devlog-wjdrbs96.tistory.com/198)
+* ### 2주차
     * [스프링부트에서 jsp 사용하기](https://devlog-wjdrbs96.tistory.com/199)
     * [DispatcherServlet 이란?](https://devlog-wjdrbs96.tistory.com/179?category=882236)
     * [Controller와 RestController 차이](https://devlog-wjdrbs96.tistory.com/179?category=882236)
@@ -15,7 +15,7 @@
     * [MessageConver란?]()
     
 
-* ### [3주차](https://devlog-wjdrbs96.tistory.com/202)
+* ### 3주차
     * [Builder란?]()
     * [스프링 계층]() 
     * [lombok이란?]()
@@ -27,7 +27,7 @@
     * [User API 만들기](https://github.com/wjdrbs96/Spring_MVC/tree/master/src/main/java/com/example/demo)
  
     
-* ### [4주차]()
+* ### 4주차
     * [세션, 쿠키란?]()
     * [JWT란?]()
     * [비밀번호 암호화하기]()
