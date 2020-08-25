@@ -16,7 +16,7 @@
     
 
 * ### 3주차
-    * [Builder란?]()
+    * [Builder란?](https://devlog-wjdrbs96.tistory.com/207)
     * [스프링 계층]() 
     * [lombok이란?]()
     * [내부 클래스와 static 내부 클래스의 차이](https://devlog-wjdrbs96.tistory.com/206)
