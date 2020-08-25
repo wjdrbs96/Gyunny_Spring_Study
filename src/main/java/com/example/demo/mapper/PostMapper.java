@@ -1,6 +1,6 @@
 package com.example.demo.mapper;
 
-import com.example.demo.model.Post;
+import com.example.demo.dto.Post;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 

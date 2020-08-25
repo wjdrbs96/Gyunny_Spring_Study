@@ -15,6 +15,7 @@ public class DefaultRes<T> {
     private String responseMessage;
     private T data;
 
+
     public DefaultRes(final int statusCode, final String responseMessage) {
         this.statusCode = statusCode;
         this.responseMessage = responseMessage;

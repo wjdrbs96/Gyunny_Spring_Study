@@ -12,3 +12,5 @@ public class StatusCode {
     public static final int SERVICE_UNAVAILABLE = 503;
     public static final int DB_ERROR = 600;
 }
+
+
