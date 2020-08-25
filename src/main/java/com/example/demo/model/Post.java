@@ -7,6 +7,6 @@ import lombok.Data;
 @AllArgsConstructor
 public class Post {
     private int postId;
-    private String nickName;
     private String title;
+    private String authors;
 }
