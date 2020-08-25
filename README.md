@@ -1,7 +1,7 @@
 # Spring Study
 
 * [1주차]()
-    * [IOC와 DI란?](https://devlog-wjdrbs96.tistory.com/165?category=882236)
+    * [IoC와 DI란?](https://devlog-wjdrbs96.tistory.com/165?category=882236)
     * [Autowired란?](https://devlog-wjdrbs96.tistory.com/166?category=882236)
     * [Compoent와 CompoentScan이란](https://devlog-wjdrbs96.tistory.com/167?category=882236)
     * [빈의 스코프](https://devlog-wjdrbs96.tistory.com/168?category=882236)
@@ -11,7 +11,8 @@
     * [DispatcherServlet 이란?](https://devlog-wjdrbs96.tistory.com/179?category=882236)
     * [Controller와 RestController 차이](https://devlog-wjdrbs96.tistory.com/179?category=882236)
     * [웹서버와 WAS의 차이](https://devlog-wjdrbs96.tistory.com/144?category=858952)
-    * [@RequestParam, @RequestMapping, @GetMapping, @PostMapping, @RequestBody, @PathVariable]()
+    * [@RequestParam, @RequestMapping, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping, @RequestBody, @PathVariable]()
+    * [MessageConver란?]()
     
 
 * [3주차](https://devlog-wjdrbs96.tistory.com/202)
