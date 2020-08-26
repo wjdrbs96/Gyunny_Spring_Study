@@ -8,12 +8,12 @@
 
 * ### 2주차
     * [Spring MVC란?]()
+    * [@RequestParam, @RequestMapping, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping, @RequestBody, @PathVariable 사용법]()
     * [HTTP Status Code](https://developer.mozilla.org/ko/docs/Web/HTTP/Status)
     * [스프링부트에서 jsp 사용하기](https://devlog-wjdrbs96.tistory.com/199)
     * [DispatcherServlet 이란?](https://devlog-wjdrbs96.tistory.com/179?category=882236)
     * [Controller와 RestController 차이](https://devlog-wjdrbs96.tistory.com/179?category=882236)
-    * [웹서버와 WAS의 차이](https://devlog-wjdrbs96.tistory.com/144?category=858952)
-    * [@RequestParam, @RequestMapping, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping, @RequestBody, @PathVariable 사용법]()
+    * [웹서버와 WAS의 차이](https://devlog-wjdrbs96.tistory.com/144?category=85852)
     * [MessageConver란?]()
     
 
@@ -28,6 +28,9 @@
     * [클라이언트에게 REST API 응답하기](https://devlog-wjdrbs96.tistory.com/197?category=882974)
     * [스프링부트에서 MyBatis 사용하기](https://devlog-wjdrbs96.tistory.com/200?category=882690)
     * [User API 만들기](https://github.com/wjdrbs96/Spring_MVC/tree/master/src/main/java/com/example/demo)
+        * [User Controller](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/java/com/example/demo/controller/UserController.java)
+        * [User Service](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/java/com/example/demo/service/UserService.java)
+        * [UserMapper](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/java/com/example/demo/mapper/UserMapper.java)
  
     
 * ### 4주차
