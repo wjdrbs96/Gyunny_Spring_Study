@@ -1,10 +1,10 @@
 package com.example.demo.dto;
 
-import lombok.Data;
+import lombok.Value;
 
-@Data
+@Value
 public class User {
-    private int userIdx;
-    private String name;
-    private String part;
+    int userIdx;
+    String name;
+    String part;
 }
