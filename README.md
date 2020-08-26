@@ -17,9 +17,10 @@
 
 * ### 3주차
     * [Builder란?](https://devlog-wjdrbs96.tistory.com/207)
-    * [스프링 계층]() 
+    * [스프링 계층](https://devlog-wjdrbs96.tistory.com/209) 
     * [lombok이란?]()
     * [내부 클래스와 static 내부 클래스의 차이](https://devlog-wjdrbs96.tistory.com/206)
+    * [제너릭 이란?](https://devlog-wjdrbs96.tistory.com/93)
     * [제너릭 메소드란?](https://devlog-wjdrbs96.tistory.com/201)
     * [ResponseEntity란?](https://devlog-wjdrbs96.tistory.com/182?category=882974)
     * [클라이언트에게 REST API 응답하기](https://devlog-wjdrbs96.tistory.com/197?category=882974)
