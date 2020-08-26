@@ -1,8 +1,8 @@
 package com.example.demo.dto;
 
-import lombok.Value;
+import lombok.Data;
 
-@Value
+@Data
 public class User {
     int userIdx;
     String name;

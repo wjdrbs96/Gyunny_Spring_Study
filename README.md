@@ -1,5 +1,17 @@
 # Spring Study
 
+* ### Java Grammar
+    * [다형성](https://devlog-wjdrbs96.tistory.com/31)
+    * [컬렉션 프레임워크란?]()
+    * [제너릭 이란?](https://devlog-wjdrbs96.tistory.com/93)
+    * [제너릭 메소드란?](https://devlog-wjdrbs96.tistory.com/201)
+    * [Builder란?](https://devlog-wjdrbs96.tistory.com/207)
+    * [내부 클래스와 static 내부 클래스의 차이](https://devlog-wjdrbs96.tistory.com/206)
+    * [자바 static 이란?](https://devlog-wjdrbs96.tistory.com/34?category=882228)
+    * [Java는 Call By Reference 일까? Call By Value 일까?](https://devlog-wjdrbs96.tistory.com/125?category=882228)
+    
+
+
 * ### 1주차
     * [IoC와 DI란?](https://devlog-wjdrbs96.tistory.com/165?category=882236)
     * [Autowired란?](https://devlog-wjdrbs96.tistory.com/166?category=882236)
@@ -18,12 +30,8 @@
     
 
 * ### 3주차
-    * [Builder란?](https://devlog-wjdrbs96.tistory.com/207)
     * [스프링 계층](https://devlog-wjdrbs96.tistory.com/209) 
     * [lombok이란?](https://devlog-wjdrbs96.tistory.com/210)
-    * [내부 클래스와 static 내부 클래스의 차이](https://devlog-wjdrbs96.tistory.com/206)
-    * [제너릭 이란?](https://devlog-wjdrbs96.tistory.com/93)
-    * [제너릭 메소드란?](https://devlog-wjdrbs96.tistory.com/201)
     * [ResponseEntity란?](https://devlog-wjdrbs96.tistory.com/182?category=882974)
     * [클라이언트에게 REST API 응답하기](https://devlog-wjdrbs96.tistory.com/197?category=882974)
     * [스프링부트에서 MyBatis 사용하기](https://devlog-wjdrbs96.tistory.com/200?category=882690)

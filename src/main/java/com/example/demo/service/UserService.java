@@ -42,7 +42,7 @@ public class UserService {
     /**
      * userIdx 회원 조회
      *
-     * @param userIdx 유저인덱
+     * @param userIdx 유저인덱스
      * @return DefaultRes
      */
    public DefaultRes findById(final int id) {
