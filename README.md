@@ -7,6 +7,8 @@
     * [빈의 스코프](https://devlog-wjdrbs96.tistory.com/168?category=882236)
 
 * ### 2주차
+    * [Spring MVC란?]()
+    * [HTTP Status Code](https://developer.mozilla.org/ko/docs/Web/HTTP/Status)
     * [스프링부트에서 jsp 사용하기](https://devlog-wjdrbs96.tistory.com/199)
     * [DispatcherServlet 이란?](https://devlog-wjdrbs96.tistory.com/179?category=882236)
     * [Controller와 RestController 차이](https://devlog-wjdrbs96.tistory.com/179?category=882236)
@@ -30,6 +32,7 @@
     
 * ### 4주차
     * [세션, 쿠키란?]()
+    * [스프링 HATEOAS란?]()
     * [JWT란?]()
     * [스프링에서 Access Token 발급과 Decode 하기]()
     * [비밀번호 암호화하기]()
