@@ -3,7 +3,7 @@
 * ### 1주차
     * [IoC와 DI란?](https://devlog-wjdrbs96.tistory.com/165?category=882236)
     * [Autowired란?](https://devlog-wjdrbs96.tistory.com/166?category=882236)
-    * [Compoent와 CompoentScan이란](https://devlog-wjdrbs96.tistory.com/167?category=882236)
+    * [Component와 ComponentScan이란](https://devlog-wjdrbs96.tistory.com/167?category=882236)
     * [빈의 스코프](https://devlog-wjdrbs96.tistory.com/168?category=882236)
 
 * ### 2주차
@@ -30,6 +30,7 @@
 * ### 4주차
     * [세션, 쿠키란?]()
     * [JWT란?]()
+    * [스프링에서 Access Token 발급과 Decode 하기]()
     * [비밀번호 암호화하기]()
     * [EC2 - RDS]()
     * [Spring AOP]()
