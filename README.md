@@ -13,7 +13,7 @@
     * [DispatcherServlet 이란?](https://devlog-wjdrbs96.tistory.com/179?category=882236)
     * [Controller와 RestController 차이](https://devlog-wjdrbs96.tistory.com/179?category=882236)
     * [웹서버와 WAS의 차이](https://devlog-wjdrbs96.tistory.com/144?category=858952)
-    * [@RequestParam, @RequestMapping, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping, @RequestBody, @PathVariable 사용]()
+    * [@RequestParam, @RequestMapping, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping, @RequestBody, @PathVariable 사용법]()
     * [MessageConver란?]()
     
 
