@@ -14,7 +14,7 @@ public class UserController {
 
     private UserService userService;
 
-    // Service 생성자 의존성 주
+    // Service 생성자 의존성 주입
     public UserController(UserService userService) {
         this.userService = userService;
     }

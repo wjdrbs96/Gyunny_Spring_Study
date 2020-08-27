@@ -34,5 +34,6 @@ public class DefaultRes<T> {
                 .build();
     }
 
+    // 서버 내부 에러
     public static final DefaultRes FAIL_DEFAULT_RES = new DefaultRes(StatusCode.INTERNAL_SERVER_ERROR, ResponseMessage.INTERNAL_SERVER_ERROR);
 }
