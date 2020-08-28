@@ -37,6 +37,12 @@ public class MemberService {
     public DefaultRes signIn(final Member member) {
         try {
             Member m = memberMapper.checkById(member.getId());
+
+            // 아이디가 틀렸을 때
+            if (m == null) {
+                return new DefaultRes(StatusCode.BAD_REQUEST, ResponseMessage.LOGIN_FAIL);
+            }
+
             // parameter1 : rawPassword, parameter2 : encodePassword
             boolean check = passwordEncoder.matches(member.getPassword(), m.getPassword());
 
@@ -80,6 +86,5 @@ public class MemberService {
             log.error(e.getMessage());
             return DefaultRes.res(StatusCode.DB_ERROR, ResponseMessage.DB_ERROR);
         }
-
     }
 }

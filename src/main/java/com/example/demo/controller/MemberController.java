@@ -23,6 +23,7 @@ public class MemberController {
         this.memberService = memberService;
     }
 
+    // 회원가입
     @PostMapping("signUp")
     public ResponseEntity signUp(@RequestBody Member member) {
         try {
@@ -33,6 +34,7 @@ public class MemberController {
         }
     }
 
+    // 로그인
     @PostMapping("signIn")
     public ResponseEntity siginIn(@RequestBody Member member) {
         try {
@@ -42,5 +44,4 @@ public class MemberController {
             return new ResponseEntity(DefaultRes.FAIL_DEFAULT_RES, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
 }

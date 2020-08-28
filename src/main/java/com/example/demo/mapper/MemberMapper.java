@@ -17,6 +17,4 @@ public interface MemberMapper {
     @Insert("INSERT INTO member (id, password) VALUES(#{id}, #{password})")
     void insertMember(Member member);
 
-    // 로그인
-
 }
