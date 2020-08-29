@@ -82,9 +82,11 @@ public class MemberService {
                 String encodePassword = passwordEncoder.encode(loginModel.getPassword());
                 Member member1 = new Member(loginModel.getId(), encodePassword);
                 int memberIdx = memberMapper.insertMember(member1);
+                System.out.println(memberIdx);
+                System.out.println(member1.getMemberIdx());
 
                 // 토큰 생성
-                final JwtService.TokenRes tokenDto = new JwtService.TokenRes(jwtService.create(memberIdx));
+                final JwtService.TokenRes tokenDto = new JwtService.TokenRes(jwtService.create(member1.getMemberIdx()));
                 return DefaultRes.res(StatusCode.OK, ResponseMessage.CREATED_USER, tokenDto);
             }
 

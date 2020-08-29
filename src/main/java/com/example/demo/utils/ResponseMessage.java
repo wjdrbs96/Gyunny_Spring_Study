@@ -22,5 +22,6 @@ public class ResponseMessage {
     public static final String DELETE_POST = "게시글 삭제 성공";
     public static final String NOT_FOUND_POST = "게시글을 찾을 수 없습니다.";
     public static final String NOT_UPDATE_POST = "수정권한이 없습니다";
+    public static final String NOT_DELETE_POST = "삭제권한이 없습니다";
 
 }

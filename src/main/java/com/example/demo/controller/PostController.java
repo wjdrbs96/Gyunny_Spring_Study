@@ -92,9 +92,10 @@ public class PostController {
      * @param PostModel
      */
     @DeleteMapping("posts/{postIdx}")
-    public ResponseEntity postDelete(@PathVariable int postIdx) {
+    public ResponseEntity postDelete(@RequestHeader String token,
+                                     @PathVariable int postIdx) {
         try {
-            return new ResponseEntity(postService.deletePost(postIdx), HttpStatus.OK);
+            return new ResponseEntity(postService.deletePost(postIdx, token), HttpStatus.OK);
         } catch (Exception e) {
             log.error(e.getMessage());
             return new ResponseEntity(DefaultRes.FAIL_DEFAULT_RES, HttpStatus.INTERNAL_SERVER_ERROR);

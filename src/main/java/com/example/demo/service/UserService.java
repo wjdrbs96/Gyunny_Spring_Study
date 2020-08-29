@@ -61,7 +61,7 @@ public class UserService {
     @Transactional
     public DefaultRes userAdd(final User user) {
         try {
-            userMapper.userAdd(user);
+            int userIdx = userMapper.userAdd(user);
             return DefaultRes.res(StatusCode.CREATED, ResponseMessage.CREATED_USER);
         } catch (Exception e) {
             //Rollback

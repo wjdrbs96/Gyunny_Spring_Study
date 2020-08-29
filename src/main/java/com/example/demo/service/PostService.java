@@ -64,6 +64,7 @@ public class PostService {
         try {
             JwtService.TOKEN decode = jwtService.decode(token);
             final int postIdx = postMapper.insertPost(postModel, decode.getMemberIdx());
+            System.out.println(postIdx);
             return DefaultRes.res(StatusCode.OK, ResponseMessage.CREATED_POST);
         } catch (Exception e) {
             //Rollback
@@ -118,13 +119,19 @@ public class PostService {
      * @return DefaultRes
      */
     @Transactional
-    public DefaultRes deletePost(int postIdx) {
+    public DefaultRes deletePost(int postIdx, String token) {
         Post post = postMapper.findByPostIdx(postIdx);
 
         if (post == null) {
             return DefaultRes.res(StatusCode.NOT_FOUND, ResponseMessage.NOT_FOUND_POST);
         }
         try {
+            JwtService.TOKEN decode = jwtService.decode(token);
+            // 삭제 권한이 없을 때
+            if (decode.getMemberIdx() != post.getMemberIdx()) {
+                return DefaultRes.res(StatusCode.BAD_REQUEST, ResponseMessage.NOT_DELETE_POST);
+            }
+
             postMapper.deletePost(postIdx);
             return DefaultRes.res(StatusCode.OK, ResponseMessage.DELETE_POST);
         } catch (Exception e) {
