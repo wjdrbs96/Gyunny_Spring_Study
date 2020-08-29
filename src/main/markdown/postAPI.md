@@ -1,8 +1,8 @@
 # Post Table
 
-| postIdx | authors | title | memberIdx |
-|----|----|-----|----|
-| 게시글 인덱스 | 이름 | 파트 | 작성자 인덱스 |
+| postIdx | authors | title | createdAt | memberIdx |
+|----|----|-----|----|----|
+| 게시글 인덱스 | 이름 | 파트 | 작성시간 | 작성자 인덱스 |
 
 
 <br>
