@@ -1,9 +1,8 @@
 package com.example.demo.mapper;
 
 import com.example.demo.dto.Post;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import com.example.demo.model.PostModel;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -19,10 +18,15 @@ public interface PostMapper {
     Post findByPostIdx(@Param("postIdx") int postIdx);
 
     // 게시글 등록
-
+    @Insert("INSERT INTO (authors, title, createdAt) VALUES (#{authors}, #{title}, #{createdAt}")
+    @Options(useGeneratedKeys = true, keyColumn = "postIdx")
+    int insertPost(PostModel postModel);
 
     // 게시글 수정
+    @Update("UPDATE post SET authors = #{postModel.authors}, tittle = #{postModel.title}, createdAt = #{postModel.createdAt} WHERE postIdx = #{postIdx}")
+    void updatePost(PostModel postModel, @Param("postIdx") int postIdx);
 
     // 게시글 삭제
-
+    @Delete("DELETE FROM post WHERE postIdx = #{postIdx}")
+    void deletePost(@Param("postIdx") int postIdx);
 }
