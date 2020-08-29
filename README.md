@@ -1,8 +1,6 @@
 # Spring Study
 
 * ### Java Grammar
-    * [다형성](https://devlog-wjdrbs96.tistory.com/31)
-    * [컬렉션 프레임워크란?]()
     * [제너릭 이란?](https://devlog-wjdrbs96.tistory.com/93)
     * [제너릭 메소드란?](https://devlog-wjdrbs96.tistory.com/201)
     * [Builder란?](https://devlog-wjdrbs96.tistory.com/207)
@@ -47,9 +45,8 @@
     * [비밀번호 암호화하기](https://devlog-wjdrbs96.tistory.com/212)
     * [jar 파일이란?]()
     * [스프링 HATEOAS란?]()
-    * [EC2 - RDS]()
+    * [EC2 - RDS 사용하기]()
     * [Spring AOP]()
-    * [트랜잭션이란?]()
     * [Post API 만들기](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/markdown/postAPI.md)
         * [PostController](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/java/com/example/demo/controller/PostController.java)
         * [PostService](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/java/com/example/demo/service/PostService.java)
