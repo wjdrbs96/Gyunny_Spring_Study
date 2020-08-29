@@ -34,7 +34,7 @@ public class PostService {
         if (postList.isEmpty()) {
             return DefaultRes.res(StatusCode.NOT_FOUND, ResponseMessage.NOT_FOUND_POST);
         }
-        return DefaultRes.res(StatusCode.OK, ResponseMessage.FIND_ALL_POST);
+        return DefaultRes.res(StatusCode.OK, ResponseMessage.FIND_ALL_POST, postList);
     }
 
     /**
@@ -48,7 +48,7 @@ public class PostService {
             return DefaultRes.res(StatusCode.NOT_FOUND, ResponseMessage.NOT_FOUND_POST);
         }
 
-        return DefaultRes.res(StatusCode.OK, ResponseMessage.FIND_ONE_POST);
+        return DefaultRes.res(StatusCode.OK, ResponseMessage.FIND_ONE_POST, post);
     }
 
     /**

@@ -1,7 +1,7 @@
 package com.example.demo.mapper;
 
 import com.example.demo.dto.Member;
-import com.example.demo.model.SignUpModel;
+import com.example.demo.model.LoginModel;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -16,6 +16,6 @@ public interface MemberMapper {
 
     // 회원가입
     @Insert("INSERT INTO member (id, password) VALUES(#{id}, #{password})")
-    void insertMember(SignUpModel signUpModel);
+    void insertMember(LoginModel loginModel);
 
 }

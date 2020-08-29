@@ -18,12 +18,12 @@ public interface PostMapper {
     Post findByPostIdx(@Param("postIdx") int postIdx);
 
     // 게시글 등록
-    @Insert("INSERT INTO (authors, title, createdAt) VALUES (#{authors}, #{title}, #{createdAt}")
-    @Options(useGeneratedKeys = true, keyColumn = "postIdx")
+    @Insert("INSERT INTO post (authors, title, createdAt) VALUES (#{authors}, #{title}, #{createdAt})")
+    @Options(useGeneratedKeys = true, keyColumn = "postModel.postIdx")
     int insertPost(PostModel postModel);
 
     // 게시글 수정
-    @Update("UPDATE post SET authors = #{postModel.authors}, tittle = #{postModel.title}, createdAt = #{postModel.createdAt} WHERE postIdx = #{postIdx}")
+    @Update("UPDATE post SET authors = #{postModel.authors}, title = #{postModel.title}, createdAt = #{postModel.createdAt} WHERE postIdx = #{postIdx}")
     void updatePost(PostModel postModel, @Param("postIdx") int postIdx);
 
     // 게시글 삭제

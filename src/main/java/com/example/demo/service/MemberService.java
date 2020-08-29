@@ -3,7 +3,7 @@ package com.example.demo.service;
 import com.example.demo.dto.Member;
 import com.example.demo.mapper.MemberMapper;
 import com.example.demo.model.DefaultRes;
-import com.example.demo.model.SignUpModel;
+import com.example.demo.model.LoginModel;
 import com.example.demo.utils.ResponseMessage;
 import com.example.demo.utils.StatusCode;
 import lombok.extern.slf4j.Slf4j;
@@ -37,9 +37,9 @@ public class MemberService {
      * @return DefaultRes
      */
 
-    public DefaultRes<JwtService.TokenRes> signIn(final SignUpModel signUpModel) {
+    public DefaultRes<JwtService.TokenRes> signIn(final LoginModel loginModel) {
         try {
-            Member member = memberMapper.checkById(signUpModel.getId());
+            Member member = memberMapper.checkById(loginModel.getId());
 
             // 아이디가 틀렸을 때
             if (member == null) {
@@ -47,7 +47,7 @@ public class MemberService {
             }
 
             // parameter1 : rawPassword, parameter2 : encodePassword
-            boolean check = passwordEncoder.matches(member.getPassword(), member.getPassword());
+            boolean check = passwordEncoder.matches(loginModel.getPassword(), member.getPassword());
 
             // 로그인 성공
             if (check) {
@@ -72,19 +72,19 @@ public class MemberService {
      * @return DefaultRes
      */
     @Transactional
-    public DefaultRes<JwtService.TokenRes> signUp(final SignUpModel signUpModel) {
+    public DefaultRes<JwtService.TokenRes> signUp(final LoginModel loginModel) {
         try {
             // 아이디 중복 체크
-            final Member member = memberMapper.checkById(signUpModel.getId());
+            final Member member = memberMapper.checkById(loginModel.getId());
 
             // 이미 유저가 존재할 때
             if (member != null) {
                 return DefaultRes.res(StatusCode.BAD_REQUEST, ResponseMessage.ALREADY_USER);
             }
             // 비밀번호 암호화
-            String encodePassword = passwordEncoder.encode(signUpModel.getPassword());
+            String encodePassword = passwordEncoder.encode(loginModel.getPassword());
             member.setPassword(encodePassword);
-            memberMapper.insertMember(signUpModel);
+            memberMapper.insertMember(loginModel);
 
             // 토큰 생성
             final JwtService.TokenRes tokenDto = new JwtService.TokenRes(jwtService.create(member.getMemberIdx()));

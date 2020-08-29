@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.dto.Member;
 import com.example.demo.model.DefaultRes;
+import com.example.demo.model.LoginModel;
 import com.example.demo.service.MemberService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -29,9 +29,9 @@ public class MemberController {
 
     // 회원가입
     @PostMapping("signUp")
-    public ResponseEntity signUp(@RequestBody Member member) {
+    public ResponseEntity signUp(@RequestBody LoginModel loginModel) {
         try {
-            return new ResponseEntity(memberService.signUp(member), HttpStatus.OK);
+            return new ResponseEntity(memberService.signUp(loginModel), HttpStatus.OK);
         } catch (Exception e) {
             log.info(e.getMessage());
             return new ResponseEntity(DefaultRes.FAIL_DEFAULT_RES, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -40,9 +40,9 @@ public class MemberController {
 
     // 로그인
     @PostMapping("signIn")
-    public ResponseEntity siginIn(@RequestBody Member member) {
+    public ResponseEntity siginIn(@RequestBody LoginModel loginModel) {
         try {
-            return new ResponseEntity(memberService.signIn(member), HttpStatus.OK);
+            return new ResponseEntity(memberService.signIn(loginModel), HttpStatus.OK);
         } catch (Exception e) {
             log.error(e.getMessage());
             return new ResponseEntity(DefaultRes.FAIL_DEFAULT_RES, HttpStatus.INTERNAL_SERVER_ERROR);
