@@ -42,13 +42,16 @@
  
     
 * ### 4주차
-    * [jar 파일이란?]()
-    * [세션, 쿠키란?]()
-    * [스프링 HATEOAS란?]()
     * [JWT란?]()
     * [스프링에서 Access Token 발급과 Decode 하기](https://devlog-wjdrbs96.tistory.com/204?category=882974)
     * [비밀번호 암호화하기](https://devlog-wjdrbs96.tistory.com/212)
+    * [jar 파일이란?]()
+    * [스프링 HATEOAS란?]()
     * [EC2 - RDS]()
     * [Spring AOP]()
     * [트랜잭션이란?]()
+    * [Post API 만들기]()
+        * [PostController]()
+        * [PostService]()
+        * [PostMapper]()
     
