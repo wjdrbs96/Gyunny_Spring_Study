@@ -137,6 +137,19 @@ public class TestController {
 * @RequestBody는 json으로 요청이 왔을 때 객체에 맵핑을 해준다. (단, User에 setter가 꼭 있어야한다!)
 * MessageConverter에 의해서 객체 맵핑이 된다. ([MessageConverter란?]())
 
+<br>
+
+### RequestHeader 
+
+```
+@GetMapping("test")
+public void Test(@RequestHeader String token) {
+    log.info(token);
+}
+```
+
+* Request Header 정보를 꺼내는 어노테이션이다.
+* 예를들어 인가 요청시 Request Header에 Token을 담아서 요청하는데 이 때 토큰을 꺼내기 위해 사용한다.
 
 <br>
 

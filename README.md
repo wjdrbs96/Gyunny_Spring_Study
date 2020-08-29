@@ -20,7 +20,7 @@
 
 * ### 2주차
     * [Spring MVC란?]()
-    * [@RequestParam, @RequestMapping, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping, @RequestBody, @PathVariable 사용법](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/markdown/annotation.md)
+    * [@RequestParam, @RequestMapping, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping, @RequestBody, @RequestHeader, @PathVariable 사용법](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/markdown/annotation.md)
     * [HTTP Status Code](https://developer.mozilla.org/ko/docs/Web/HTTP/Status)
     * [스프링부트에서 jsp 사용하기](https://devlog-wjdrbs96.tistory.com/199)
     * [DispatcherServlet 이란?](https://devlog-wjdrbs96.tistory.com/179?category=882236)
