@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.example.demo.dto.Post;
 import com.example.demo.mapper.PostMapper;
 import com.example.demo.model.DefaultRes;
@@ -18,10 +19,12 @@ import java.util.List;
 public class PostService {
 
     private PostMapper postMapper;
+    private JwtService jwtService;
 
     // 생성자 의존성 주입
-    public PostService(PostMapper postMapper) {
+    public PostService(PostMapper postMapper, JwtService jwtService) {
         this.postMapper = postMapper;
+        this.jwtService = jwtService;
     }
 
     /**
@@ -57,10 +60,10 @@ public class PostService {
      * @return DefaultRes
      */
     @Transactional
-    public DefaultRes insertPost(PostModel postModel) {
+    public DefaultRes insertPost(PostModel postModel, String token) {
         try {
-            final int postIdx = postMapper.insertPost(postModel);
-            log.info(String.valueOf(postIdx));
+            JwtService.TOKEN decode = jwtService.decode(token);
+            final int postIdx = postMapper.insertPost(postModel, decode.getMemberIdx());
             return DefaultRes.res(StatusCode.OK, ResponseMessage.CREATED_POST);
         } catch (Exception e) {
             //Rollback
@@ -76,14 +79,30 @@ public class PostService {
      * @return DefaultRes
      */
     @Transactional
-    public DefaultRes updatePost(PostModel postModel, int postIdx) {
+    public DefaultRes updatePost(PostModel postModel, int postIdx, String token) {
         Post post = postMapper.findByPostIdx(postIdx);
         if (post == null) {
             return DefaultRes.res(StatusCode.NOT_FOUND, ResponseMessage.NOT_FOUND_POST);
         }
+
+        if (token == null) {
+            return DefaultRes.res(StatusCode.NOT_FOUND, ResponseMessage.EMPTY_TOKEN);
+        }
+
         try {
+            // 토큰 해독
+            JwtService.TOKEN decode = jwtService.decode(token);
+
+            // 게시글 수정 권한이 없음
+            if (decode.getMemberIdx() != post.getMemberIdx()) {
+                return DefaultRes.res(StatusCode.BAD_REQUEST, ResponseMessage.NOT_UPDATE_POST);
+            }
+
             postMapper.updatePost(postModel, postIdx);
             return DefaultRes.res(StatusCode.OK, ResponseMessage.UPDATE_POST);
+        } catch (JWTDecodeException jwt) {
+            log.error(jwt.getMessage());
+            return DefaultRes.res(StatusCode.BAD_REQUEST, ResponseMessage.INVALID_TOKEN);
         } catch (Exception e) {
             //Rollback
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();

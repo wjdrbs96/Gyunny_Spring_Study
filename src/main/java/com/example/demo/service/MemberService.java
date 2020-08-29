@@ -77,18 +77,20 @@ public class MemberService {
             // 아이디 중복 체크
             final Member member = memberMapper.checkById(loginModel.getId());
 
-            // 이미 유저가 존재할 때
-            if (member != null) {
-                return DefaultRes.res(StatusCode.BAD_REQUEST, ResponseMessage.ALREADY_USER);
-            }
-            // 비밀번호 암호화
-            String encodePassword = passwordEncoder.encode(loginModel.getPassword());
-            member.setPassword(encodePassword);
-            memberMapper.insertMember(loginModel);
+            if (member == null) {
+                // 비밀번호 암호화
+                String encodePassword = passwordEncoder.encode(loginModel.getPassword());
+                Member member1 = new Member(loginModel.getId(), encodePassword);
+                int memberIdx = memberMapper.insertMember(member1);
 
-            // 토큰 생성
-            final JwtService.TokenRes tokenDto = new JwtService.TokenRes(jwtService.create(member.getMemberIdx()));
-            return DefaultRes.res(StatusCode.OK, ResponseMessage.CREATED_USER, tokenDto);
+                // 토큰 생성
+                final JwtService.TokenRes tokenDto = new JwtService.TokenRes(jwtService.create(memberIdx));
+                return DefaultRes.res(StatusCode.OK, ResponseMessage.CREATED_USER, tokenDto);
+            }
+
+            // 이미 유저가 존재할 때
+            return DefaultRes.res(StatusCode.BAD_REQUEST, ResponseMessage.ALREADY_USER);
+
         } catch (Exception e) {
             //Rollback
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();

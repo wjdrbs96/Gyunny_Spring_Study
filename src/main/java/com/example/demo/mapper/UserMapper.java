@@ -22,7 +22,7 @@ public interface UserMapper {
     int userAdd(final User user);
 
     // 유저 수정
-    @Update("UPDATE user SET name = #{user.name}, part = #{user.part} WHERE userIdx = 1")
+    @Update("UPDATE user SET name = #{user.name}, part = #{user.part} WHERE userIdx = #{userIdx}")
     void userUpdate(@Param("userIdx") int userIdx, final User user);
 
     // 유저 삭제

@@ -59,9 +59,10 @@ public class PostController {
      * @param PostModel
      */
     @PostMapping("posts")
-    public ResponseEntity createPost(@RequestBody PostModel postModel) {
+    public ResponseEntity createPost(@RequestHeader String token,
+                                     @RequestBody PostModel postModel) {
         try {
-            return new ResponseEntity(postService.insertPost(postModel), HttpStatus.OK);
+            return new ResponseEntity(postService.insertPost(postModel, token), HttpStatus.OK);
         } catch (Exception e) {
             log.error(e.getMessage());
             return new ResponseEntity(DefaultRes.FAIL_DEFAULT_RES, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -74,10 +75,11 @@ public class PostController {
      * @param PostModel
      */
     @PutMapping("posts/{postIdx}")
-    public ResponseEntity postUpdate(@PathVariable int postIdx,
+    public ResponseEntity postUpdate(@RequestHeader String token,
+                                     @PathVariable int postIdx,
                                      @RequestBody PostModel postModel) {
         try {
-            return new ResponseEntity(postService.updatePost(postModel, postIdx), HttpStatus.OK);
+            return new ResponseEntity(postService.updatePost(postModel, postIdx, token), HttpStatus.OK);
         } catch (Exception e) {
             log.error(e.getMessage());
             return new ResponseEntity(DefaultRes.FAIL_DEFAULT_RES, HttpStatus.INTERNAL_SERVER_ERROR);

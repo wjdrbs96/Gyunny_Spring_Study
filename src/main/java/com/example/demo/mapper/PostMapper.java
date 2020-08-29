@@ -18,9 +18,9 @@ public interface PostMapper {
     Post findByPostIdx(@Param("postIdx") int postIdx);
 
     // 게시글 등록
-    @Insert("INSERT INTO post (authors, title, createdAt) VALUES (#{authors}, #{title}, #{createdAt})")
-    @Options(useGeneratedKeys = true, keyColumn = "postModel.postIdx")
-    int insertPost(PostModel postModel);
+    @Insert("INSERT INTO post (authors, title, createdAt, memberIdx) VALUES (#{postModel.authors}, #{postModel.title}, #{postModel.createdAt}, #{memberIdx})")
+    @Options(useGeneratedKeys = true, keyColumn = "postIdx")
+    int insertPost(PostModel postModel, @Param("memberIdx") int memberIdx);
 
     // 게시글 수정
     @Update("UPDATE post SET authors = #{postModel.authors}, title = #{postModel.title}, createdAt = #{postModel.createdAt} WHERE postIdx = #{postIdx}")

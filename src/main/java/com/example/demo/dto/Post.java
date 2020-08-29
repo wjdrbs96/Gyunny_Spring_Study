@@ -8,4 +8,5 @@ public class Post {
     private String authors;
     private String title;
     private String createdAt;
+    private int memberIdx;
 }

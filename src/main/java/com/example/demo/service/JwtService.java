@@ -69,18 +69,18 @@ public class JwtService {
     public static class TOKEN {
         //토큰에 담길 정보 필드
         //초기값을 -1로 설정함으로써 로그인 실패시 -1반환
-        private int userIdx = -1;
+        private int memberIdx = -1;
 
         public TOKEN() {
 
         }
 
         public TOKEN(final int userIdx) {
-            this.userIdx = userIdx;
+            this.memberIdx = userIdx;
         }
 
-        public int getUserIdx() {
-            return userIdx;
+        public int getMemberIdx() {
+            return memberIdx;
         }
     }
 
