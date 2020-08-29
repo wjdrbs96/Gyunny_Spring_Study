@@ -16,9 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("member")
 public class MemberController {
 
-    MemberService memberService;
+    private MemberService memberService;
 
-    // Service 생성자 의존성 주입
+    /**
+     * MemberService 생성자 의존성 주입
+     *
+     * @param MemberService
+     */
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
     }

@@ -26,15 +26,15 @@ public class JwtService {
      /**
      * 토큰 생성
      *
-     * @param userIdx 토큰에 담길 로그인한 사용자의 회원 고유 IDX
+     * @param memberIdx 토큰에 담길 로그인한 사용자의 회원 고유 IDX
      * @return 토큰
      */
 
-    public String create(final int userIdx) {
+    public String create(final int memberIdx) {
         try {
             JWTCreator.Builder b = JWT.create();
             b.withIssuer(ISSUER);
-            b.withClaim("userIdx", userIdx);
+            b.withClaim("memberIdx", memberIdx);
             return b.sign(Algorithm.HMAC256(SECRET));
         } catch (JWTCreationException jwtCreationException) {
             log.info(jwtCreationException.getLocalizedMessage());
@@ -55,13 +55,14 @@ public class JwtService {
             final JWTVerifier jwtVerifier = require(Algorithm.HMAC256(SECRET)).withIssuer(ISSUER).build();
             // 토큰 검증
             DecodedJWT decodedJWT = jwtVerifier.verify(token);
-            // 토큰 payload 반환, 정상적인 토큰이라면 토큰 사용자 고유 ID, 아니라면 -1
-            return new TOKEN(decodedJWT.getClaim("userIdx").asLong().intValue());
+            // 토큰 payload 반환, 정상적인 토큰이라면 토큰 사용자 고유 ID
+            return new TOKEN(decodedJWT.getClaim("memberIdx").asLong().intValue());
         } catch (JWTVerificationException jve) {
             log.error(jve.getMessage());
         } catch (Exception e) {
             log.error(e.getMessage());
         }
+        // 정상적인 토큰이 아니라면 -1로 반환
         return new TOKEN();
     }
 

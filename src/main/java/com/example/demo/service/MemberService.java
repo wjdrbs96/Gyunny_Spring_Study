@@ -3,6 +3,7 @@ package com.example.demo.service;
 import com.example.demo.dto.Member;
 import com.example.demo.mapper.MemberMapper;
 import com.example.demo.model.DefaultRes;
+import com.example.demo.model.SignUpModel;
 import com.example.demo.utils.ResponseMessage;
 import com.example.demo.utils.StatusCode;
 import lombok.extern.slf4j.Slf4j;
@@ -17,15 +18,17 @@ public class MemberService {
 
     private final MemberMapper memberMapper;
     private final PasswordEncoder passwordEncoder;
+    private final JwtService jwtService;
 
     /**
-     * UserMapper 생성자 의존성 주입
+     * UserMapper, PasswordEncoder, JwtService 생성자 의존성 주입
      *
-     * @param userMapper, passwordEncoder
+     * @param userMapper, passwordEncoder, JwtService
      */
-    public MemberService(MemberMapper memberMapper, PasswordEncoder passwordEncoder) {
+    public MemberService(MemberMapper memberMapper, PasswordEncoder passwordEncoder, JwtService jwtService) {
         this.memberMapper = memberMapper;
         this.passwordEncoder = passwordEncoder;
+        this.jwtService = jwtService;
     }
 
     /**
@@ -34,23 +37,26 @@ public class MemberService {
      * @return DefaultRes
      */
 
-    public DefaultRes signIn(final Member member) {
+    public DefaultRes<JwtService.TokenRes> signIn(final SignUpModel signUpModel) {
         try {
-            Member m = memberMapper.checkById(member.getId());
+            Member member = memberMapper.checkById(signUpModel.getId());
 
             // 아이디가 틀렸을 때
-            if (m == null) {
+            if (member == null) {
                 return new DefaultRes(StatusCode.BAD_REQUEST, ResponseMessage.LOGIN_FAIL);
             }
 
             // parameter1 : rawPassword, parameter2 : encodePassword
-            boolean check = passwordEncoder.matches(member.getPassword(), m.getPassword());
+            boolean check = passwordEncoder.matches(member.getPassword(), member.getPassword());
 
             // 로그인 성공
             if (check) {
-                return new DefaultRes(StatusCode.OK, ResponseMessage.LOGIN_SUCCESS);
+                // 토큰 생성
+                JwtService.TokenRes tokenDto = new JwtService.TokenRes(jwtService.create(member.getMemberIdx()));
+                return new DefaultRes(StatusCode.OK, ResponseMessage.LOGIN_SUCCESS, tokenDto);
             }
 
+            // 비밀번호가 틀렸을 때
             return new DefaultRes(StatusCode.BAD_REQUEST, ResponseMessage.LOGIN_FAIL);
 
         } catch (Exception e) {
@@ -66,20 +72,23 @@ public class MemberService {
      * @return DefaultRes
      */
     @Transactional
-    public DefaultRes signUp(final Member member) {
+    public DefaultRes<JwtService.TokenRes> signUp(final SignUpModel signUpModel) {
         try {
             // 아이디 중복 체크
-            final Member m = memberMapper.checkById(member.getId());
+            final Member member = memberMapper.checkById(signUpModel.getId());
 
             // 이미 유저가 존재할 때
-            if (m != null) {
+            if (member != null) {
                 return DefaultRes.res(StatusCode.BAD_REQUEST, ResponseMessage.ALREADY_USER);
             }
             // 비밀번호 암호화
-            String encodePassword = passwordEncoder.encode(member.getPassword());
+            String encodePassword = passwordEncoder.encode(signUpModel.getPassword());
             member.setPassword(encodePassword);
-            memberMapper.insertMember(member);
-            return DefaultRes.res(StatusCode.OK, ResponseMessage.CREATED_USER);
+            memberMapper.insertMember(signUpModel);
+
+            // 토큰 생성
+            final JwtService.TokenRes tokenDto = new JwtService.TokenRes(jwtService.create(member.getMemberIdx()));
+            return DefaultRes.res(StatusCode.OK, ResponseMessage.CREATED_USER, tokenDto);
         } catch (Exception e) {
             //Rollback
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();

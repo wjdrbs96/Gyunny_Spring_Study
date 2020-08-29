@@ -9,4 +9,5 @@ public class Post {
     private int postId;
     private String title;
     private String authors;
+    private int memberIdx;
 }

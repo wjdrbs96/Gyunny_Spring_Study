@@ -50,7 +50,7 @@
     * [EC2 - RDS]()
     * [Spring AOP]()
     * [트랜잭션이란?]()
-    * [Post API 만들기]()
+    * [Post API 만들기](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/markdown/postAPI.md)
         * [PostController]()
         * [PostService]()
         * [PostMapper]()

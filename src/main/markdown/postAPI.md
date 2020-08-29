@@ -1,6 +1,6 @@
 # Post Table
 
-| postIdx | authors | title | userIdx |
+| postIdx | authors | title | memberIdx |
 |----|----|-----|----|
 | 게시글 인덱스 | 이름 | 파트 | 작성자 인덱스 |
 
