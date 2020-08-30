@@ -82,10 +82,12 @@ public class PostService {
     @Transactional
     public DefaultRes updatePost(PostModel postModel, int postIdx, String token) {
         Post post = postMapper.findByPostIdx(postIdx);
+        // 존재하지 않는 게시글 일 때
         if (post == null) {
             return DefaultRes.res(StatusCode.NOT_FOUND, ResponseMessage.NOT_FOUND_POST);
         }
 
+        // 토큰이 존재하지 않을 때
         if (token == null) {
             return DefaultRes.res(StatusCode.NOT_FOUND, ResponseMessage.EMPTY_TOKEN);
         }
@@ -122,9 +124,16 @@ public class PostService {
     public DefaultRes deletePost(int postIdx, String token) {
         Post post = postMapper.findByPostIdx(postIdx);
 
+        // 존재하지 않는 게시글 일 때
         if (post == null) {
             return DefaultRes.res(StatusCode.NOT_FOUND, ResponseMessage.NOT_FOUND_POST);
         }
+
+        // 토큰이 존재하지 않을 때
+        if (token == null) {
+            return DefaultRes.res(StatusCode.NOT_FOUND, ResponseMessage.EMPTY_TOKEN);
+        }
+
         try {
             JwtService.TOKEN decode = jwtService.decode(token);
             // 삭제 권한이 없을 때

@@ -15,4 +15,8 @@ public interface MemberMapper {
     @Options(useGeneratedKeys = true, keyColumn = "member.memberIdx")
     int insertMember(Member member);
 
+    // Idx로 회원 찾기
+    @Select("SELECT * FROM member WHERE memberIdx = #{memberIdx}")
+    Member findByMemberIdx(@Param("memberIdx") int memberIdx);
+
 }
