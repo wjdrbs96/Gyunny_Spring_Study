@@ -77,11 +77,11 @@ public class PostController {
      */
     @Auth
     @PutMapping("posts/{postIdx}")
-    public ResponseEntity postUpdate(//@RequestHeader String token,
+    public ResponseEntity postUpdate(@RequestHeader("token") String token,
                                      @PathVariable int postIdx,
                                      @RequestBody PostModel postModel) {
         try {
-            return new ResponseEntity(postService.updatePost(postModel, postIdx), HttpStatus.OK);
+            return new ResponseEntity(postService.updatePost(postModel, postIdx, token), HttpStatus.OK);
         } catch (Exception e) {
             log.error(e.getMessage());
             return new ResponseEntity(DefaultRes.FAIL_DEFAULT_RES, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -104,7 +104,5 @@ public class PostController {
             return new ResponseEntity(DefaultRes.FAIL_DEFAULT_RES, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
-
 
 }

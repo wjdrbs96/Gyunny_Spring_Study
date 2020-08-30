@@ -147,7 +147,7 @@ public class TestController {
 public class TestController {
 
     @GetMapping("test")
-    public void Test(@RequestHeader String token) {
+    public void Test(@RequestHeader("token") final String token) {
         log.info(token);
     }
 }
