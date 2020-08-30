@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.model.DefaultRes;
 import com.example.demo.model.PostModel;
 import com.example.demo.service.PostService;
+import com.example.demo.utils.auth.Auth;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -74,12 +75,13 @@ public class PostController {
      *
      * @param PostModel
      */
+    @Auth
     @PutMapping("posts/{postIdx}")
-    public ResponseEntity postUpdate(@RequestHeader String token,
+    public ResponseEntity postUpdate(//@RequestHeader String token,
                                      @PathVariable int postIdx,
                                      @RequestBody PostModel postModel) {
         try {
-            return new ResponseEntity(postService.updatePost(postModel, postIdx, token), HttpStatus.OK);
+            return new ResponseEntity(postService.updatePost(postModel, postIdx), HttpStatus.OK);
         } catch (Exception e) {
             log.error(e.getMessage());
             return new ResponseEntity(DefaultRes.FAIL_DEFAULT_RES, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -91,6 +93,7 @@ public class PostController {
      *
      * @param PostModel
      */
+    @Auth
     @DeleteMapping("posts/{postIdx}")
     public ResponseEntity postDelete(@RequestHeader String token,
                                      @PathVariable int postIdx) {

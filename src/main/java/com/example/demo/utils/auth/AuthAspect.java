@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 @Aspect
 public class AuthAspect {
 
-    private final static String AUTHORIZATION = "Authorization";
+    private final static String TOKEN = "token";
     /**
      * 실패 시 기본 반환 Response
      */
@@ -41,7 +41,7 @@ public class AuthAspect {
 
     @Around("@annotation(com.example.demo.utils.auth.Auth)")
     public Object around(final ProceedingJoinPoint pjp) throws Throwable {
-        final String jwt = httpServletRequest.getHeader(AUTHORIZATION);
+        final String jwt = httpServletRequest.getHeader(TOKEN);
 
         // 토큰 존재 여부 확인
         if (jwt == null) {

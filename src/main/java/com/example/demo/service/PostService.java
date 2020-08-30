@@ -80,26 +80,26 @@ public class PostService {
      * @return DefaultRes
      */
     @Transactional
-    public DefaultRes updatePost(PostModel postModel, int postIdx, String token) {
+    public DefaultRes updatePost(PostModel postModel, int postIdx) {
         Post post = postMapper.findByPostIdx(postIdx);
         // 존재하지 않는 게시글 일 때
         if (post == null) {
             return DefaultRes.res(StatusCode.NOT_FOUND, ResponseMessage.NOT_FOUND_POST);
         }
 
-        // 토큰이 존재하지 않을 때
-        if (token == null) {
-            return DefaultRes.res(StatusCode.NOT_FOUND, ResponseMessage.EMPTY_TOKEN);
-        }
+//        // 토큰이 존재하지 않을 때
+//        if (token == null) {
+//            return DefaultRes.res(StatusCode.NOT_FOUND, ResponseMessage.EMPTY_TOKEN);
+//        }
 
         try {
             // 토큰 해독
-            JwtService.TOKEN decode = jwtService.decode(token);
+            //JwtService.TOKEN decode = jwtService.decode(token);
 
-            // 게시글 수정 권한이 없음
-            if (decode.getMemberIdx() != post.getMemberIdx()) {
-                return DefaultRes.res(StatusCode.BAD_REQUEST, ResponseMessage.NOT_UPDATE_POST);
-            }
+//            // 게시글 수정 권한이 없음
+//            if (decode.getMemberIdx() != post.getMemberIdx()) {
+//                return DefaultRes.res(StatusCode.BAD_REQUEST, ResponseMessage.NOT_UPDATE_POST);
+//            }
 
             postMapper.updatePost(postModel, postIdx);
             return DefaultRes.res(StatusCode.OK, ResponseMessage.UPDATE_POST);
