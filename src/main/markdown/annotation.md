@@ -153,6 +153,20 @@ public void Test(@RequestHeader String token) {
 
 <br>
 
+### HttpServletRequest란?
+
+```
+@GetMapping("test")
+public void test(HttpServletRequest httpServletRequest) {
+    System.out.println(httpServletRequest.getHeader("token"));
+}
+```
+
+* URL 정보, 쿠키, 헤더, GET/POST로 전송한 값을 가져오는데 사용된다.
+* 위와 같이 하면 헤더에 담아온 토큰을 꺼낼 수 있다.
+
+<br>
+
 ### PathVariable 
 
 ```
