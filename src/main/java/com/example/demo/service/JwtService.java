@@ -11,6 +11,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import static com.auth0.jwt.JWT.require;
 
 @Slf4j
@@ -35,6 +38,7 @@ public class JwtService {
             JWTCreator.Builder b = JWT.create();
             b.withIssuer(ISSUER);
             b.withClaim("memberIdx", memberIdx);
+            b.withExpiresAt(expiresAt());
             return b.sign(Algorithm.HMAC256(SECRET));
         } catch (JWTCreationException jwtCreationException) {
             log.info(jwtCreationException.getLocalizedMessage());
@@ -65,6 +69,22 @@ public class JwtService {
         // 정상적인 토큰이 아니라면 -1로 반환
         return new TOKEN();
     }
+
+    /**
+     * 토큰 만료 시간 설정
+     *
+     * @param
+     * @return 토큰 만료 시간
+     */
+
+    private Date expiresAt() {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(new Date());
+        // 한달 24 * 31
+        cal.add(Calendar.HOUR, 744);
+        return cal.getTime();
+    }
+
 
     public static class TOKEN {
         //토큰에 담길 정보 필드
