@@ -12,7 +12,7 @@ public interface MemberMapper {
 
     // 회원가입
     @Insert("INSERT INTO member (id, password) VALUES(#{id}, #{password})")
-    @Options(useGeneratedKeys = true, keyColumn = "member.memberIdx")
+    @Options(useGeneratedKeys = true, keyProperty = "memberIdx")
     int insertMember(Member member);
 
     // Idx로 회원 찾기
