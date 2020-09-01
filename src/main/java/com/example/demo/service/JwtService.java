@@ -81,7 +81,7 @@ public class JwtService {
         Calendar cal = Calendar.getInstance();
         cal.setTime(new Date());
         // 한달 24 * 31
-        cal.add(Calendar.HOUR, 744);
+        cal.add(Calendar.HOUR, 30);
         return cal.getTime();
     }
 

@@ -41,7 +41,7 @@
     
 * ### 4주차
     * [비밀번호 암호화하기](https://devlog-wjdrbs96.tistory.com/212)
-    * [JWT란?]()
+    * [JWT란?](https://velopert.com/2389)
     * [스프링에서 Access Token 발급과 Decode 하기](https://devlog-wjdrbs96.tistory.com/204?category=882974)
     * [Spring AOP란?](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/markdown/AOP.md)
     * [Post API 만들기](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/markdown/postAPI.md)
