@@ -39,9 +39,10 @@
   
     
 * ### 4주차
-
+    * [MyBatis 공식 홈페이지](https://mybatis.org/mybatis-3/ko/sqlmap-xml.html)
     * [스프링부트에서 MyBatis XML 사용하기](https://devlog-wjdrbs96.tistory.com/200)
     * [비밀번호 암호화하기](https://devlog-wjdrbs96.tistory.com/212)
+     
 
 
 * ### 5주차
