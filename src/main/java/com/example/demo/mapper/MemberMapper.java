@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.*;
 public interface MemberMapper {
 
     // 중복아이디 체크
-    @Select("SELECT * FROM member WHERE id = #{id}")
+    @Select("SELECT * FROM member WHERE id = #{param1}")
     Member checkById(@Param("id") final String id);
 
     // 회원가입
