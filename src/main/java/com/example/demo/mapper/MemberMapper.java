@@ -7,16 +7,16 @@ import org.apache.ibatis.annotations.*;
 public interface MemberMapper {
 
     // 중복아이디 체크
-    @Select("SELECT * FROM member WHERE id = #{param1}")
+    @Select("SELECT * FROM mybatis.member WHERE id = #{param1}")
     Member checkById(@Param("id") final String id);
 
     // 회원가입
-    @Insert("INSERT INTO member (id, password) VALUES(#{id}, #{password})")
+    @Insert("INSERT INTO mybatis.member (id, password) VALUES(#{id}, #{password})")
     @Options(useGeneratedKeys = true, keyProperty = "memberIdx")
     int insertMember(Member member);
 
     // Idx로 회원 찾기
-    @Select("SELECT * FROM member WHERE memberIdx = #{memberIdx}")
+    @Select("SELECT * FROM mybatis.member WHERE memberIdx = #{memberIdx}")
     Member findByMemberIdx(@Param("memberIdx") int memberIdx);
 
 }
