@@ -39,7 +39,7 @@
   
     
 * ### 4주차
-    * [MyBatis 공식 홈이지](https://mybatis.org/mybatis-3/ko/sqlmap-xml.html)
+    * [MyBatis 공식 홈페이지](https://mybatis.org/mybatis-3/ko/sqlmap-xml.html)
     * [스프링부트에서 MyBatis XML 사용하기](https://devlog-wjdrbs96.tistory.com/200)
     * [MyBatis Parameter 사용법]()
     * [비밀번호 암호화하기](https://devlog-wjdrbs96.tistory.com/212)
@@ -52,7 +52,7 @@
     * [Spring AOP란?](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/markdown/AOP%EB%9E%80.md)
     * [Post API 만들기](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/markdown/postAPI.md)
         * [PostController](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/java/com/example/demo/controller/PostController.java)
-        * [PostService](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/java/com/example/demo/service/PostService.java)
+        * [PostService](https페://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/java/com/example/demo/service/PostService.java)
         * [JwtService](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/java/com/example/demo/service/JwtService.java)
         * [PostMapper](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/java/com/example/demo/mapper/PostMapper.java)
     
