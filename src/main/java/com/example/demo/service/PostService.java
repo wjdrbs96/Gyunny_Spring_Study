@@ -63,8 +63,8 @@ public class PostService {
     public DefaultRes insertPost(PostModel postModel, String token) {
         try {
             JwtService.TOKEN decode = jwtService.decode(token);
-            final int postIdx = postMapper.insertPost(postModel, decode.getMemberIdx());
-            System.out.println(postIdx);
+            postMapper.insertPost(postModel, decode.getMemberIdx());
+            System.out.println(postModel.getPostIdx());
             return DefaultRes.res(StatusCode.OK, ResponseMessage.CREATED_POST);
         } catch (Exception e) {
             //Rollback
@@ -103,7 +103,8 @@ public class PostService {
             return DefaultRes.res(StatusCode.OK, ResponseMessage.UPDATE_POST);
         } catch (JWTDecodeException jwt) {
             log.error(jwt.getMessage());
-            return DefaultRes.res(StatusCode.BAD_REQUEST, ResponseMessage.INVALID_TOKEN);
+            return DefaultRes.res(StatusCode.BAD_REQUEST, ResponseMessage.INVALID_TOKEN)
+                    ;
         } catch (Exception e) {
             //Rollback
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
