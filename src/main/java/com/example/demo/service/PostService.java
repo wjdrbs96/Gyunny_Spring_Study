@@ -64,7 +64,6 @@ public class PostService {
         try {
             JwtService.TOKEN decode = jwtService.decode(token);
             postMapper.insertPost(postModel, decode.getMemberIdx());
-            System.out.println(postModel.getPostIdx());
             return DefaultRes.res(StatusCode.OK, ResponseMessage.CREATED_POST);
         } catch (Exception e) {
             //Rollback

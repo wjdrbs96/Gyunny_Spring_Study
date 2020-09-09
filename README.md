@@ -56,3 +56,7 @@
         * [JwtService](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/java/com/example/demo/service/JwtService.java)
         * [PostMapper](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/java/com/example/demo/mapper/PostMapper.java)
     
+    
+* ### 6주차 
+    * [Spring Boot AWS EC2, RDS 사용하기]()
+    * [Spring Boot AWS S3 파일 업로드]()
