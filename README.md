@@ -1,14 +1,5 @@
 # Spring Study
 
-* ### Java Grammar
-    * [제너릭 이란?](https://devlog-wjdrbs96.tistory.com/93)
-    * [제너릭 메소드란?](https://devlog-wjdrbs96.tistory.com/201)
-    * [Builder란?](https://devlog-wjdrbs96.tistory.com/207)
-    * [내부 클래스와 static 내부 클래스의 차이](https://devlog-wjdrbs96.tistory.com/206)
-    * [자바 static 이란?](https://devlog-wjdrbs96.tistory.com/34?category=882228)
-    * [Java는 Call By Reference 일까? Call By Value 일까?](https://devlog-wjdrbs96.tistory.com/125?category=882228)
-    
-
 
 * ### 1주차
     * [IoC와 DI란?](https://devlog-wjdrbs96.tistory.com/165?category=882236)
