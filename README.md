@@ -8,7 +8,6 @@
     * [빈의 스코프](https://devlog-wjdrbs96.tistory.com/168?category=882236)
 
 * ### 2주차
-    * [Spring MVC란?]()
     * [@RequestParam, @RequestMapping, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping, @RequestBody, @RequestHeader, @PathVariable 사용법](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/markdown/MVC%20%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98.md)
     * [HTTP Status Code](https://developer.mozilla.org/ko/docs/Web/HTTP/Status)
     * [스프링부트에서 jsp 사용하기](https://devlog-wjdrbs96.tistory.com/199)
@@ -32,7 +31,7 @@
 * ### 4주차
     * [MyBatis 공식 홈페이지](https://mybatis.org/mybatis-3/ko/sqlmap-xml.html)
     * [스프링부트에서 MyBatis XML 사용하기](https://devlog-wjdrbs96.tistory.com/200)
-    * [MyBatis Parameter 사용법]()
+    * [MyBatis @Pararm, XML 속성]()
     * [비밀번호 암호화하기](https://devlog-wjdrbs96.tistory.com/212)
      
 
