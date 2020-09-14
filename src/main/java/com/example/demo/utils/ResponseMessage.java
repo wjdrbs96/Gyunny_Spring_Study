@@ -27,4 +27,7 @@ public class ResponseMessage {
     public static final String NOT_UPDATE_POST = "수정권한이 없습니다";
     public static final String NOT_DELETE_POST = "삭제권한이 없습니다";
 
+    // 프로필
+    public static final String SUCCESS_PROFILE_REGISTER = "프로필 등록 성공입니다";
+
 }

@@ -49,4 +49,4 @@
     
 * ### 6주차 
     * [Spring Boot AWS EC2, RDS 사용하기]()
-    * [Spring Boot AWS S3 파일 업로드]()
+    * [Spring Boot AWS S3 파일 업로드](https://devlog-wjdrbs96.tistory.com/213)
