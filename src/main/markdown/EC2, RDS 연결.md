@@ -40,7 +40,7 @@ ex) sudo ssh -i 'AWS.pem' ubuntu@52.79.90.119
 
 ```
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-spring.datasource.url=jdbc:mysql://본인엔드포인트:3306/mybatis?useUnicode=yes&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Seoul
+spring.datasource.url=jdbc:mysql://본인엔드포인트:3306/스키마이름?useUnicode=yes&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Seoul
 spring.datasource.username=마스터사용자이름 (AWS 에서 설정했을 것임)
 spring.datasource.password=본인이 설정한 비밀번호 (AWS 에서 설정했을 것임)
 ```
