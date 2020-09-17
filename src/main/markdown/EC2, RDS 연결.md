@@ -113,12 +113,17 @@ ex) java -jar demo-0.0.1-SNAPSHOT.jar
 ### jar 파일 백그라운드 실행
 
 ```
-nohup java -jar jar파일이름.jar &
+1. nohup java -jar jar파일이름.jar &
 ex) nohup java -jar demo-0.0.1-SNAPSHOT.jar &
+```
 
-명령어 : jobs (백그라운드 프로세스 확인)
-백그라운드 프로세스 죽이기 : kill %jobsNumber
-ex) kill %1 
+### 프로세스 죽이기
+
+```
+1. ps -ef | grep java (현재 실행중인 프로세스 확인) 
+2. kill -9 프로세스실행번호  (프로세스 죽이기)
+ex) kill -9 3089
+3. ps -ef | grep java (프로세스 재확인)
 ```
 
 <br>
