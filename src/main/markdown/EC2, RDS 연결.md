@@ -23,7 +23,7 @@ ex) sudo ssh -i 'AWS.pem' ubuntu@52.79.90.119
 
 <img src="https://user-images.githubusercontent.com/45676906/93416524-ecf40800-f8e0-11ea-8764-eba8cbaaafd2.png">
 
-<br> <br>
+<br> 
 
 위에는 `EC2`에 접속한 모습이다. 
 
