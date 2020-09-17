@@ -104,7 +104,7 @@ git clone 클론할 레포의 주소
 1. cd 레포지토리 이름 
 2. mvn package (현재 레포에 있는 의존성, 코드들을 jar파일에 압축해서 넣는다.)
 3. cd target (target 디렉토리가 생겼을 것이다.)
-4. java -jar jar파일이름.jar  
+4. java -jar 파일이름.jar  
 ex) java -jar demo-0.0.1-SNAPSHOT.jar 
 ```
 
@@ -113,7 +113,7 @@ ex) java -jar demo-0.0.1-SNAPSHOT.jar
 ### jar 파일 백그라운드 실행
 
 ```
-1. nohup java -jar jar파일이름.jar &
+1. nohup java -jar 파일이름.jar &
 ex) nohup java -jar demo-0.0.1-SNAPSHOT.jar &
 ```
 
