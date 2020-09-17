@@ -50,3 +50,8 @@
 * ### 6주차 
     * [Spring Boot AWS EC2, RDS 사용하기](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/markdown/EC2%2C%20RDS%20%EC%97%B0%EA%B2%B0.md)
     * [Spring Boot AWS S3 파일 업로드](https://devlog-wjdrbs96.tistory.com/213)
+    
+
+* ### 7주차
+    * [간단한 테스트코드 작성]()
+    * [Travis CI 배포 자동화]()
