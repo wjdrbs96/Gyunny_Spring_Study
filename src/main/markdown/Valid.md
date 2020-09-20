@@ -77,7 +77,7 @@ public class UserController {
 
 <img src="https://user-images.githubusercontent.com/45676906/93712204-60bb3c80-fb8f-11ea-92ec-9a883c220f4e.png">
 
-<br> <br>
+<br> 
 
 포스트맨으로 테스트 했을 때 위와 같이 `비밀번호`가 `null`이기 때문에 `400에러`가 발생한다.
 
@@ -146,6 +146,10 @@ public class ExceptionController {
 
 <br>
 
+그리고 `@ControllerAdvice`는 `Controller`가 실행되면 자동으로 같이 실행이 되는 어노테이션이다. 
+
+<br>
+
 ```
 e.getBindingResult().getAllErrors().forEach(c -> {
     errorList.add(c.getDefaultMessage());
@@ -159,7 +163,7 @@ e.getBindingResult().getAllErrors().forEach(c -> {
 
 <img src="https://user-images.githubusercontent.com/45676906/93714589-c19e4100-fb9e-11ea-9426-bda9c53dbb1c.png">
 
-<br> <br>
+<br>
 
 
 따라서 위와 같이 `비밀번호`, `이메일` 에서 2개의 예외가 발생하면 메시지도 2개가 나오는 것을 확인할 수 있다.
