@@ -75,6 +75,8 @@ public class UserController {
 
 따라서 위와 같이 `로그인` 정보를 받는 간단한 `Controller`가 있을 때 `@Valid`어노테이션을 이용해서 실제 객체 검증이 가능한지 테스트 해보자.
 
+<br>
+
 <img src="https://user-images.githubusercontent.com/45676906/93712204-60bb3c80-fb8f-11ea-92ec-9a883c220f4e.png">
 
 <br> 
