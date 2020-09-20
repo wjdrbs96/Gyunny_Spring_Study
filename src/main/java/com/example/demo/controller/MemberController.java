@@ -6,10 +6,13 @@ import com.example.demo.service.MemberService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.validation.Valid;
 
 @RestController
 @Slf4j
@@ -29,7 +32,7 @@ public class MemberController {
 
     // 회원가입
     @PostMapping("signUp")
-    public ResponseEntity signUp(@RequestBody LoginModel loginModel) {
+    public ResponseEntity signUp(@RequestBody @Valid LoginModel loginModel) {
         try {
             return new ResponseEntity(memberService.signUp(loginModel), HttpStatus.OK);
         } catch (Exception e) {
@@ -40,8 +43,9 @@ public class MemberController {
 
     // 로그인
     @PostMapping("signIn")
-    public ResponseEntity siginIn(@RequestBody LoginModel loginModel) {
+    public ResponseEntity siginIn(@Valid @RequestBody LoginModel loginModel) {
         try {
+            log.info(loginModel.toString());
             return new ResponseEntity(memberService.signIn(loginModel), HttpStatus.OK);
         } catch (Exception e) {
             log.error(e.getMessage());
