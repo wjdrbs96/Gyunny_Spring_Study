@@ -65,6 +65,10 @@
 
 위와 같이 간단한 html 파일을 작성해보자.
 
+<br>
+
+### 2. `Controller` 만들기
+
 ```java
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -101,6 +105,8 @@ public class HomeController {
 ```
 
 그리고 이번에는 `pom.xml`에 `security` 의존성을 추가해주자. 그리고 나서 위의 코드를 실행하면 로그화면에서 아래의 로그를 보게 될 것이다.
+
+<br>
 
 ```
 Using generated security password: b04dd7bb-017d-4df5-ba1c-24a4cc75f9a3
