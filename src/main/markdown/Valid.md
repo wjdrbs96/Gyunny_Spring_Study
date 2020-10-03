@@ -173,6 +173,25 @@ e.getBindingResult().getAllErrors().forEach(c -> {
 
 <br>
 
+그리고 `Request Header에 데이터의 값을 찾지 못할 때` 에러를 담는 클래스는 아래와 같다. 
+
+### `MissingRequestHeaderException`
+
+```java
+@ControllerAdvice
+@Slf4j
+public class AdviceController {
+
+    @ExceptionHandler(MissingRequestHeaderException.class)
+    public ResponseEntity notHeaders() {
+        return new ResponseEntity(ResponseDto.res(StatusCode.BAD_REQUEST, ResponseMessage.NULL_VALUE), HttpStatus.BAD_REQUEST);
+    }
+
+}
+```
+
+
+<br>
 
 ## @Valid 검증 annotation
 
