@@ -190,6 +190,24 @@ public class AdviceController {
 }
 ```
 
+<br>
+
+Request로 부터 Multipart 자료형과 같이 `Request Body가 아닌 form-data Request에서 받고 @Valid 에러`가 발생했을 때
+
+### `BindException`
+
+```java
+@ControllerAdvice
+@Slf4j
+public class AdviceController {
+    @ExceptionHandler(BindException.class)
+    public ResponseEntity bindException(BindException b) {
+        return new ResponseEntity(ResponseDto.res(StatusCode.BAD_REQUEST, b.getMessage()), HttpStatus.BAD_REQUEST);
+    }
+    
+}
+```
+
 
 <br>
 
