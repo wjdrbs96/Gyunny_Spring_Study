@@ -9,7 +9,6 @@
 
 * ### 2주차
     * [@RequestParam, @RequestMapping, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping, @RequestBody, @RequestHeader, @PathVariable 사용법](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/markdown/MVC%20%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98.md)
-    * [HTTP Status Code](https://developer.mozilla.org/ko/docs/Web/HTTP/Status)
     * [스프링부트에서 jsp 사용하기](https://devlog-wjdrbs96.tistory.com/199)
     * [DispatcherServlet 이란?](https://devlog-wjdrbs96.tistory.com/179?category=882236)
     * [Controller와 RestController 차이](https://devlog-wjdrbs96.tistory.com/179?category=882236)
@@ -66,5 +65,10 @@
     * [CI / CD란?](https://github.com/wjdrbs96/Gyunny_Spring_Study/blob/master/src/main/markdown/CI-CD.md)
     * [Travis CI 연동하기](https://github.com/wjdrbs96/Gyunny_Spring_Study/blob/master/src/main/markdown/Travis%20CI%20%EC%97%B0%EB%8F%99.md)
     * [Travis CI와 AWS S3 연동하기]()
+    
+    
+* ### 10주차
+    * [Spring Data JPA란?]()
+    * [Spring Security와 OAuth 2.0으로 로그인 구현]()
     
     
