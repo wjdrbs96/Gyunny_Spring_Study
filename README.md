@@ -63,4 +63,6 @@
     
     
 * ### 9주차
-    * [CI / CD란?]()
+    * [CI / CD란?](https://github.com/wjdrbs96/Gyunny_Spring_Study/blob/master/src/main/markdown/CI-CD.md)
+    * [Travis CI 연동하기]()
+    
