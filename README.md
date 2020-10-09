@@ -54,14 +54,13 @@
 
 * ### 7주차
     * [@Valid으로 예외처리](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/markdown/Valid.md)
-    * [간단한 테스트코드 작성](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/markdown/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8%EC%97%90%EC%84%9C%20%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C%EC%9E%91%EC%84%B1.md)
+    * [테스트코드 작성](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/markdown/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8%EC%97%90%EC%84%9C%20%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C%EC%9E%91%EC%84%B1.md)
     
 
 * ### 8주차
     * [Spring Security](https://github.com/wjdrbs96/Gyunny_Spring_Study/blob/master/src/main/markdown/security.md)
-    * [Spring Data JPA]()
     * [Spring에서 JSON 파싱](https://github.com/wjdrbs96/Gyunny_Spring_Study/blob/master/src/main/markdown/JSONParse.md)
     
     
 * ### 9주차
-    
+    * [CI / CD란?]()
