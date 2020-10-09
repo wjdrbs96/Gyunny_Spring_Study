@@ -51,6 +51,8 @@ notifications:   # 4
 
 ```
 
+<br>
+
 ### `1. branches`
 
 - Travis CI를 어느 브랜치가 푸시될 때 수행할지 지정한다. 
@@ -75,9 +77,36 @@ notifications:   # 4
 
 그리고 나서, master 브랜치에 커밋과 푸시를 하고 다시 `Travis CI 저장소` 페이지를 확인하자. 
 
+<br>
+
 <img src="https://user-images.githubusercontent.com/45676906/95604862-201a5900-0a93-11eb-8414-9102115f2a22.png">
 
 <br>
 
 그러면 위와 같이 잘 되었고, Email로도 수신이 온 것을 확인할 수 있다. 
+
+<br>
+
+## Travis CI 라벨 추가
+
+오픈소스들을 보면 build passing 이란 라벨이 README.md에 표시된 것을 볼 수 있다. 
+
+<img src="https://user-images.githubusercontent.com/45676906/95606833-e139d280-0a95-11eb-943e-60849d4ebd53.png">
+
+<br>
+
+여기서 위에 `Build/passing`을 눌러보자.
+
+<img src="https://user-images.githubusercontent.com/45676906/95607111-3aa20180-0a96-11eb-9e8c-f1e11a516677.png">
+
+<br>
+
+그리고 RESULT의 마크다운을 복사하여 README.md 파일에 그대로 붙혀넣으면 된다.
+
+<img src="https://user-images.githubusercontent.com/45676906/95607281-789f2580-0a96-11eb-88ca-e01e6870cf18.png">
+
+<br>
+
+그러면 위와 같이 라벨이 추가된 것을 확인할 수 있다. 
+
 
