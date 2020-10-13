@@ -65,7 +65,7 @@
     * [CI / CD란?](https://github.com/wjdrbs96/Gyunny_Spring_Study/blob/master/src/main/markdown/CI-CD.md)
     * [Travis CI 연동하기](https://github.com/wjdrbs96/Gyunny_Spring_Study/blob/master/src/main/markdown/Travis%20CI%20%EC%97%B0%EB%8F%99.md)
     * [Travis CI와 AWS S3 연동하기](https://github.com/wjdrbs96/Gyunny_Spring_Study/blob/master/src/main/markdown/Travis%20CI%EC%99%80%20AWS%20S3%EC%97%B0%EB%8F%99.md)
-    
+    * [Travis CI와 AWS S3 CodeDeploy 연동하기]()
     
 * ### 10주차
     * [Spring Data JPA란?]()
