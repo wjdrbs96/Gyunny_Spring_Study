@@ -1,7 +1,7 @@
 # Spring Study
 
-* ### `스프링 프레임워크 핵심 기술`
-    - [IoC 컨테이너와 1부: 스프링 IoC 컨테이너와 빈](https://github.com/wjdrbs96/Gyunny_Spring_Study/tree/master/spring/%EC%8A%A4%ED%94%84%EB%A7%81%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%ED%95%B5%EC%8B%AC%20%EA%B8%B0%EC%88%A0)
+* ### [스프링 프레임워크 핵심 기술](https://github.com/wjdrbs96/Gyunny_Spring_Study/tree/master/spring/%EC%8A%A4%ED%94%84%EB%A7%81%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%ED%95%B5%EC%8B%AC%20%EA%B8%B0%EC%88%A0)
+ 
 
 
 * ### IoC
