@@ -139,3 +139,14 @@ ex) kill -9 3089
 6. nohup java -jar jar파일이름.jar &
 ex) nohup java -jar demo-0.0.1-SNAPSHOT.jar &
 ```
+
+<br>
+
+### jar 파일 재배포 좋은 팁
+
+```
+1. sudo netstat -tnlp
+2. sudo kill -9 {pid}
+3. nohup java -jar jar파일이름.jar &
+ex) sudo nohup java -jar server.jar &
+```
