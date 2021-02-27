@@ -14,12 +14,13 @@
     * [Autowired란?](https://devlog-wjdrbs96.tistory.com/166?category=882236)
     * [Component와 ComponentScan이란](https://devlog-wjdrbs96.tistory.com/167?category=882236)
     * [빈의 스코프](https://devlog-wjdrbs96.tistory.com/168?category=882236)
-
+    * [Spring Bean LifeCycle](https://github.com/wjdrbs96/Gyunny_Spring_Study/blob/master/spring/%EB%B9%88%20%EC%83%9D%EB%AA%85%EC%A3%BC%EA%B8%B0%20%EC%BD%9C%EB%B0%B1.md)
+    
 * ## AOP
     * [Spring AOP란?](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/markdown/AOP%EB%9E%80.md)
 
 * ## Spring MVC
-    * [MVC 어노테이션 사용법](https://github.com/wjdrbs96/Spring_MVC/blob/master/src/main/markdown/MVC%20%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98.md)
+    * [MVC 어노테이션 사용법](https://github.com/wjdrbs96/Gyunny_Spring_Study/blob/master/spring/MVC%20%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98.md)
     * [스프링부트에서 jsp 사용하기](https://devlog-wjdrbs96.tistory.com/199)
     * [DispatcherServlet 이란?](https://devlog-wjdrbs96.tistory.com/179?category=882236)
     * [Controller와 RestController 차이](https://devlog-wjdrbs96.tistory.com/179?category=882236)
