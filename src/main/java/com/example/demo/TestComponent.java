@@ -1,26 +1,16 @@
 package com.example.demo;
 
-import org.springframework.context.annotation.Bean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
 
 @Component
 public class TestComponent {
 
-    @Bean(initMethod = "init", destroyMethod = "close")
-    public void test() {
+    @Autowired
+    private TestRepository testRepository;
 
-    }
+    public void createTest() {
+        Test test = testRepository.findByTest(1);
 
-    @PostConstruct
-    public void init() {
-        System.out.println("초기화");
-    }
-
-    @PreDestroy
-    public void close() {
-        System.out.println("종료");
     }
 }
