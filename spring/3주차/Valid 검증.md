@@ -1,4 +1,4 @@
-## @Valid를 이용해 @RequestBody 객체 검증하기
+## `@Valid를 이용해 @RequestBody 객체 검증하기`
 
 `@RestController`와 `@RequestBody`를 이용하여 클라이언트로부터 들어오는 값들을 검증하는 방법을 소개한다.
 예를들어 로그인을 하는 과정에서 `아이디`, `비밀번호`의 값이 올바른 값으로 오지 않았을 때, 일정길이 이상이 되었으면
@@ -6,13 +6,13 @@
 
 <br>
 
-### Gradle
+### `Gradle`
 
 ```
 implementation 'org.springframework.boot:spring-boot-starter-validation'
 ```
 
-### Maven
+### `Maven`
 
 ```
 <dependency>
@@ -24,7 +24,7 @@ implementation 'org.springframework.boot:spring-boot-starter-validation'
 <br>
 
 
-### @Valid 사용하는 방법
+### `@Valid 사용하는 방법`
 
 ```java
 import lombok.Builder;
@@ -85,7 +85,7 @@ public class UserController {
 
 <br>
 
-### 테스트 코드로 검증
+### `테스트 코드로 검증`
 
 ```java
 @RunWith(SpringRunner.class)
@@ -119,7 +119,7 @@ public class UserControllerTest {
 
 <br>
 
-### @Valid시 발생하는 Exception Handling
+### `@Valid시 발생하는 Exception Handling`
 
 `@Valid`로 `@ReustBody`로 들어온 객체 검증에서 `Bad Request`가 발생할 때 `Custom한 errorHandling`을 할 수 있다.
 
@@ -175,6 +175,8 @@ e.getBindingResult().getAllErrors().forEach(c -> {
 
 그리고 `Request Header에 데이터의 값을 찾지 못할 때` 에러를 담는 클래스는 아래와 같다. 
 
+<br>
+
 ### `MissingRequestHeaderException`
 
 ```java
@@ -194,6 +196,8 @@ public class AdviceController {
 
 Request로 부터 Multipart 자료형과 같이 `Request Body가 아닌 form-data Request에서 받고 @Valid 에러`가 발생했을 때
 
+<br>
+
 ### `BindException`
 
 ```java
@@ -211,7 +215,7 @@ public class AdviceController {
 
 <br>
 
-## @Valid 검증 annotation
+## `@Valid 검증 annotation`
 
 * ### NotBlank
     * null이 아닌 값이다.
@@ -236,7 +240,7 @@ public class AdviceController {
 
 <br>
 
-## 정리가 잘 된 블로그
+## `정리가 잘 된 블로그`
 
 * [https://cheese10yun.github.io/spring-guide-exception/](https://cheese10yun.github.io/spring-guide-exception/)
 

@@ -1,10 +1,10 @@
-# 스프링 MVC
+# `스프링 MVC`
 
 ![MVC](https://user-images.githubusercontent.com/45676906/91659890-9f6c5280-eb0d-11ea-8831-2b2c2b3ee40d.png)
 
 <br>
 
-# Controller 
+# `Controller` 
 
 * MVC 중에 하나인 Controller이다. @Controller 어노테이션을 추가해주면 스프링에서 Controller라고 인식을 해줌
 * Bean으로 등록됨
@@ -53,7 +53,7 @@ public class HelloController {
 
 <br>
 
-### Controller 내부 구조
+### `Controller 내부 구조`
 
 ![Controller](https://user-images.githubusercontent.com/45676906/91659934-de9aa380-eb0d-11ea-88aa-98b9bc2ad5f2.png)
 
@@ -63,7 +63,7 @@ public class HelloController {
 
 <br>
 
-### RestController 구조
+### `RestController 구조`
 
 ![RestController](https://user-images.githubusercontent.com/45676906/91660011-641e5380-eb0e-11ea-8ca9-a39b513451e0.png)
 
