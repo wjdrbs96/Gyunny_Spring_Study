@@ -1,14 +1,21 @@
 package com.example.demo.dto;
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.Builder;
 
 /**
  * created by jg 2021/04/21
  */
-@Getter
-@RequiredArgsConstructor
 public class HelloDto {
-    private final String name;
-    private final int amount;
+     private String name;
+     private int amount;
+     private int part;
+
+     @Builder
+     public HelloDto(String name, int amount) {
+          this.name = name;
+          this.amount = amount;
+     }
 }
+
+
+
