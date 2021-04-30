@@ -17,4 +17,9 @@ public class HelloController {
         System.out.println(helloDto);
         return helloDto;
     }
+
+    @GetMapping("/gyun")
+    public String gyun() {
+        return "Gyunny";
+    }
 }
