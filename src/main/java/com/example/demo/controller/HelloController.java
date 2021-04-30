@@ -1,9 +1,10 @@
 package com.example.demo.controller;
 
-import com.example.demo.dto.HelloDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * created by jg 2021/04/21
@@ -12,12 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @GetMapping("/")
-    public HelloDto hello() {
-        return HelloDto.builder()
-                .amount(100)
-                .name("Gyunny")
-                .build();
+    @@GetMapping("/")
+    public String test(@RequestPart(value = "profileImg") MultipartFile multipartFile,) {
+        return "test";
     }
 }
 

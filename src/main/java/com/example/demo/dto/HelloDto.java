@@ -1,20 +1,18 @@
 package com.example.demo.dto;
 
-import lombok.Builder;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.ToString;
 
 /**
  * created by jg 2021/04/21
  */
+@ToString
+@Getter
+@AllArgsConstructor
 public class HelloDto {
+     private Long id;
      private String name;
-     private int amount;
-     private int part;
-
-     @Builder
-     public HelloDto(String name, int amount) {
-          this.name = name;
-          this.amount = amount;
-     }
 }
 
 
