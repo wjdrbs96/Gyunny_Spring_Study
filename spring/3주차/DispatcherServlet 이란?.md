@@ -4,7 +4,7 @@
 `Servlet`을 이용해서 MVC 형태로 개발을 했었습니다. (여러분도 경험이 있으실지도..?)
 
 ```java
-public class MyExample extends HttpServlet {
+public class HelloServlet extends HttpServlet {
 	
 	@Override
 	public void init(ServletConfig config) throws ServletException {
@@ -21,8 +21,6 @@ public class MyExample extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		resp.setContentType("text/html;charset=UTF-8");
-		req.setCharacterEncoding("UTF-8");
 	}
 }
 ```
@@ -40,18 +38,15 @@ public class MyExample extends HttpServlet {
 ![2](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FXgjhG%2FbtqF1AUAxyO%2FAkXutqJmN4lwxJfOiib8o1%2Fimg.png)
 
 `DispatcherServlet`은 위와 같은 구조로 되어 있습니다. 즉, `DispatcherServlet`가 해당 URI 요청에 맞는 Controller를 찾아서 매핑을 시켜주는 역할을 합니다. 이러한 역할 때문에 기존에 하나하나 직접 Servlet으로 작성해주었던 것을 현재는 엄청나게 편리하게 사용할 수 있는 것입니다. 
-
-위 그림의 동작 원리는 중요하기 때문에 꼭 잘 봐두셔야 합니다.
+(위 그림의 동작 원리는 중요하기 때문에 꼭 잘 봐두셔야 합니다.)
 
 <br>
 
 ![3](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FVLuGa%2FbtqF0QD6bNs%2Fkfk40qPWLOYtWlZGRn3au0%2Fimg.png)
 
-뭐 단편적인 그림으로 보면 위와 같은 그림으로 볼 수도 있을 것 같습니다.
+그림으로 보면 위와 같은 그림으로 볼 수도 있을 것 같습니다.
 
-<br>
-
-그리고 하나 만 더 간단하게 알아보겠습니다. [Controller vs RestController](https://github.com/wjdrbs96/Gyunny_Spring_Study/blob/master/spring/3%EC%A3%BC%EC%B0%A8/Controller%20VS%20RestController.md) 을 저번 글에서 알아보았습니다. 
+그리고 [Controller vs RestController](https://github.com/wjdrbs96/Gyunny_Spring_Study/blob/master/spring/3%EC%A3%BC%EC%B0%A8/Controller%20VS%20RestController.md) 차이를 저번 글에서 알아보았습니다. 
 어떤 차이가 있었죠? `@Controller`는 `view` 파일 이름으로 return 하고, `@RestController`는 return 타입에 맞는 `HttpMessageConverter`가 실행이 된다고 했습니다.
 
 <br>
@@ -70,7 +65,7 @@ public class MyExample extends HttpServlet {
 
 `RestController`는 `Controller` + `ResponseBody`이기 때문에 위와 같은 그림으로 표현할 수 있습니다. 
 
-뭐 복잡하게 하면.. 더 많은 내용들이 있지만 간단하게 `DispatcherServlet`에 대해서 알아보는 글이었습니다. 간단하게라도 MVC에서 어떠한 형태로 돌아가는지는 알아야 하기 때문에 잘 알아두시면 좋을 거 같습니다.
+더 깊게 들어가면.. 더 많은 내용들이 있지만 간단하게 `DispatcherServlet`에 대해서 알아보는 글이었습니다. 간단하게라도 MVC에서 어떠한 형태로 돌아가는지는 알아야 하기 때문에 잘 알아두시면 좋을 거 같습니다.
 
 <br>
 

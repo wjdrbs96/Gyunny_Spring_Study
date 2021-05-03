@@ -12,17 +12,18 @@ import java.io.IOException;
 public class FilterTest implements Filter {
 
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        System.out.println("==");
+    public void init(FilterConfig filterConfig) throws ServletException {
+        System.out.println("Filter init");
     }
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
-        Filter.super.init(filterConfig);
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+        System.out.println("do Filter");
+        chain.doFilter(request, response);
     }
 
     @Override
     public void destroy() {
-        Filter.super.destroy();
+        System.out.println("Filter Destroy");
     }
 }

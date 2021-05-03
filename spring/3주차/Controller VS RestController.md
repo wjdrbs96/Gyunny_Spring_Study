@@ -8,7 +8,7 @@ MVC 패턴을 간단하게 말하면 위의 그림처럼 표현할 수 있습니
 - `Model`: 비즈니스 로직 처리 및 디비 접근
 - `View`: 사용자에게 보여줄 뷰를 관리
 
-뭐.. 간단하게 말하면 위의 정도?로 표현할 수 있을 거 같습니다. 복잡하게 말하면 Servlet, jsp 등등.. 얘기해서 정리할 것이 많지만 일단은 MVC는 이런 느낌이구나 정도로 가볍게 알아보겠습니다. 
+위의 정도?로 표현할 수 있을 거 같습니다. 복잡하게 말하면 Servlet, jsp 등등.. 얘기해서 정리할 것이 많지만 일단은 MVC는 이런 느낌이구나 정도로 가볍게 알아보겠습니다. 
 
 
 <br>
@@ -16,7 +16,7 @@ MVC 패턴을 간단하게 말하면 위의 그림처럼 표현할 수 있습니
 # `Controller` 
 
 - MVC 중에 하나인 Controller이 있습ㄴ디ㅏ. @Controller 어노테이션을 추가해주면 스프링에서 Controller라고 인식을 해줍니다. 
-- Bean으로 등록됨 (Bean, IoC 컨테이너.. 무엇인지 기억나시죠??)
+- Bean으로 등록됩니다. (Bean, IoC 컨테이너.. 무엇인지 기억나시죠??)
 
 
 ```java
@@ -35,7 +35,7 @@ public class HelloController {
 }
 ```
 
-`HelloController`에 간단하게 위와 같이 작성해보겠습니다. 일단 뭐 `Model`, `Controller`가 여기에 존재하는 거 같습니다. 
+`HelloController`에 간단하게 위와 같이 작성해보겠습니다. 코드를 보니 `Model`, `Controller`가 여기에 존재합니다. model는 `key`, `value` 형태의 데이터를 담는 공간이라고 생각하면 편할 거 같습니다. 
 
 <br>
 
@@ -64,7 +64,7 @@ Spring Project에서 View를 작성하는 폴더는 `resources` 아래에 작성
 안녕하세요. hi
 ```
 
-그래서 위의 html을 보면 결과는 `Model`에 담아놓았던 데이터가 출력이 됩니다. 즉, 간단히 말하면 `Controller`에 요청이 들어오면 요청 받은 데이터를 `Model`에 담아 view로 보내주는 역할을 하게 됩니다.  
+그래서 위의 html을 보면 결과는 `Model`에 담아놓았던 데이터를 key로 꺼내면 data에 해당하는 것이 출력이 됩니다. 즉, 간단히 말하면 `Controller`에 요청이 들어오면 요청 받은 뷰의 필요한 데이터를 `Model`에 담아 view로 보내주는 역할을 하게 됩니다.  
 
 <br> <br>
 
