@@ -6,23 +6,23 @@ import javax.servlet.*;
 import java.io.IOException;
 
 /**
- * created by jg 2021/04/30
+ * created by jg 2021/05/04
  */
 @Component
-public class FilterTest implements Filter {
-
+public class Filter3 implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        System.out.println("Filter init");
+        System.out.println("init3");
     }
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        System.out.println("do Filter");
+        System.out.println("doFilter3");
+        chain.doFilter(request, response);
     }
 
     @Override
     public void destroy() {
-        System.out.println("Filter Destroy");
+        System.out.println("destroy3");
     }
 }
