@@ -1,25 +1,23 @@
 package com.example.demo.controller;
 
-import com.example.demo.dto.HelloDto;
+import com.example.demo.service.HelloService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
  * created by jg 2021/04/21
  */
+@RequiredArgsConstructor
 @RestController
 public class HelloController {
 
-    @PostMapping("/")
-    public HelloDto test(@RequestBody HelloDto helloDto) {
-        System.out.println(helloDto);
-        return helloDto;
-    }
+    private final HelloService helloService;
 
-    @GetMapping("/gyun")
+    @GetMapping("/")
     public String gyun() {
+        System.out.println("test");
+        helloService.helloService();
         return "Gyunny";
     }
 }
