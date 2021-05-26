@@ -11,13 +11,14 @@ import java.util.List;
 @Mapper
 public interface HelloMapper {
 
-    @Insert("INSERT INTO gyunny_group (title) VALUES(#{group.title})")
-    @Options(useGeneratedKeys = true, keyProperty = "group.groupId")
-    int insertGroup(@Param("group") GroupDto groupDto);
+    @Insert("INSERT INTO gyunny_group (title) VALUES(#{title})")
+    @Options(useGeneratedKeys = true, keyProperty = "groupId")
+    int insertGroup(GroupDto groupDto);
 
     @Insert("INSERT INTO user_group (users_id, gyunny_group_id) VALUES (#{userId}, #{groupId})")
-    void insertGroupUsers(@Param("groupId") int groupId, @Param("userId") int userId);
+    void insertGroupUsers(int groupId, int userId);
 
     @Select("SELECT * FROM gyunny_group")
     List<GroupDto> getGroup();
 }
+
