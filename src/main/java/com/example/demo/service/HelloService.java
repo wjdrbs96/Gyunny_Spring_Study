@@ -1,9 +1,9 @@
 package com.example.demo.service;
 
-import com.example.demo.dto.GroupDto;
 import com.example.demo.dto.Member;
 import com.example.demo.mapper.HelloMapper;
 import com.example.demo.mapper.MemberMapper;
+import com.example.demo.mapper.SpringMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,6 +17,7 @@ public class HelloService {
 
     private final HelloMapper helloMapper;
     private final MemberMapper memberMapper;
+    private final SpringMapper springMapper;
 
     @Transactional
     public void helloService() {
@@ -29,7 +30,8 @@ public class HelloService {
 //        System.out.println("===========");
 //        System.out.println("===========");
 //        helloMapper.insertGroupUsers(groupDto.getGroupId(), 1);
-        memberMapper.insertMember(new Member("이름", "파트"), 1);
+        Member member = new Member("스프링", "서버파트", 1L);
+        springMapper.insert(member);
     }
 }
 

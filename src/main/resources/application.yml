@@ -1,3 +1,9 @@
+fruit:
+  name: apple
+
+
+
+
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -8,5 +14,3 @@ spring:
 mybatis:
   type-aliases-package: com.yapp.ios1
   mapper-locations: /mapper/**/*.xml
-
-

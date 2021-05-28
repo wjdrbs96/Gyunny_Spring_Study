@@ -2,8 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.example.demo.mapper.HelloMapper">
-
+<mapper namespace="com.example.demo.mapper.SpringMapper">
+    <insert id="insert" parameterType="com.example.demo.dto.Member"
+            useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO member (name, part, userIdx)
+        VALUES (#{name}, #{part}, #{userIdx})
+    </insert>
 </mapper>
 
 
