@@ -1,11 +1,13 @@
 package com.example.demo.dto;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 /**
  * created by jg 2021/05/26
  */
+@NoArgsConstructor
 @ToString
 @Getter
 public class Member {

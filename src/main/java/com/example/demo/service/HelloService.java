@@ -8,6 +8,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * created by jg 2021/04/24
  */
@@ -15,12 +17,10 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class HelloService {
 
-    private final HelloMapper helloMapper;
-    private final MemberMapper memberMapper;
     private final SpringMapper springMapper;
 
     @Transactional
-    public void helloService() {
+    public List<Member> helloService() {
 //        GroupDto groupDto = new GroupDto("규니규니");
 //        //helloMapper.getGroup();
 //        helloMapper.insertGroup(groupDto);
@@ -30,8 +30,9 @@ public class HelloService {
 //        System.out.println("===========");
 //        System.out.println("===========");
 //        helloMapper.insertGroupUsers(groupDto.getGroupId(), 1);
-        Member member = new Member("스프링", "서버파트", 1L);
-        springMapper.insert(member);
+        //Member member = new Member("스프링", "서버파트", 1L);
+        //springMapper.insert(member);
+        return springMapper.getMembers();
     }
 }
 

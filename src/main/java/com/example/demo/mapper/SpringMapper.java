@@ -11,5 +11,6 @@ import java.util.List;
 @Mapper
 public interface SpringMapper {
 
+    List<Member> getMembers();
     int insert(Member member);
 }

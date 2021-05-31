@@ -8,6 +8,10 @@
         INSERT INTO member (name, part, userIdx)
         VALUES (#{name}, #{part}, #{userIdx})
     </insert>
+
+    <select id="getMembers" resultType="com.example.demo.dto.Member">
+        SELECT * FROM member
+    </select>
 </mapper>
 
 
